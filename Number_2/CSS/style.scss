@@ -1,3 +1,214 @@
-.new{
-    background-color:blueviolet;
+/*Variables*/
+$maincol1: red;
+$maincol2: magenta; //or color: #df49a6;
+$maingrad: linear-gradient(135deg, $maincol1, $maincol2);//or no gradient theme
+$seccol1: #23232e;
+$seccol1h: #141418;
+$txtcola: white;
+$txtcolb: black;
+$txtcolc: rgba(201, 201, 201, 0.774);
+$primgrad: linear-gradient(45deg, $txtcolb, $txtcola);
+$secgrad: linear-gradient(to left, $seccol1, $txtcolc);
+$transan: 600ms;
+
+/*Functions*/
+@mixin topics($font, $color) {
+	text-align: left;
+	font-family: "Montserrat", "Courier New", Courier;
+	font-size: $font;
+	padding-top: 2rem;
+	color: $color;
+}
+
+/*HTML-global*/
+:root{
+	font-size: 17px;
+	font-family: "Montserrat", "Courier New", Courier;
+}
+
+/*Body*/
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*scroll*/
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background: $primgrad;
+}
+::-webkit-scrollbar-thumb {
+	background: $maingrad;
+	border-radius: 6px;
+}
+
+/*Main*/
+main{
+	margin-left: 5rem;
+	scroll-snap-type: y mandatory;
+	overflow-y: auto;
+	height: 100vh;
+	
+}
+/*Section*/
+section {
+	scroll-snap-align: start;
+	scroll-snap-stop: normal;
+	height: 100vh;
+}
+#home{
+	margin: 0;
+}
+#exercise{
+	margin: 0;
+}
+#u-events{
+	margin: 0;
+}
+#about{
+	margin: 0;
+}
+
+/*Navbar*/
+.nav-bar {
+	position: fixed;
+	background-color: $seccol1;
+	transition: width $transan ease;
+}
+
+.nav-set {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	justify-content: space-evenly;
+}
+
+.nav-item {
+	width: 100%;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: $txtcolc;
+	text-decoration: none;
+	filter: grayscale(100%) opacity(0.7);
+	transition: $transan;
+}
+
+.nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: $seccol1h;
+	color: $txtcola;
+}
+
+.link-text {
+	display: none;
+	margin-left: 1rem;
+}
+
+.nav-icon{
+	font-size: 2rem;
+	color: $maincol2;
+	transition: $transan;
+}
+.nav-link .nav-icon {
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: $txtcola;
+	background: $seccol1h;
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
+}
+
+.logo .nav-icon {
+	transform: rotate(0deg);
+	transition: $transan;
+}
+
+.logo-text{
+	display: inline;
+	position: absolute;
+	left: -999px;
+	transition: $transan;
+}
+
+.nav-bar:hover .logo .nav-icon{
+	transform: rotate(180deg);
+}
+
+/* Large screens - Navbar*/
+@media only screen and (min-width: 600px) {
+	.nav-bar {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
+
+	.nav-bar:hover {
+		width: 16rem;
+	}
+
+	.nav-bar:hover .link-text {
+		display: inline;
+		
+	}
+
+	.nav-bar:hover .logo .nav-icon
+	{
+		margin-left: 11rem;
+	}
+
+	.nav-bar:hover .logo-text
+	{
+		left: 0px;
+	}
+	.smllscn{
+		display: none;
+	}
+}
+
+/* Small screens - Navbar*/
+@media only screen and (max-width: 600px) {
+	.nav-bar {
+		top: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+	.logo {
+		display: none;
+	}
+	.nav-set {
+		flex-direction: row;
+	}
+	.nav-link {
+		justify-content: center;
+	}
+	main {
+		margin: 0;
+	}
+	.smllscn{
+		display: flex;
+	}
+}
+
+/*Text Divs*/
+.txtdiv{
+	padding-right: 1rem;
+	padding-left: 1rem;
 }
