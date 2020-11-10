@@ -10,7 +10,6 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 /*scroll*/
@@ -27,17 +26,15 @@ body {
 /*Main*/
 main {
   margin-left: 5rem;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
   overflow-y: auto;
-  height: 100vh;
 }
 
 /*Section*/
 section {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
-  height: 100vh;
 }
 
 #home {
@@ -62,6 +59,7 @@ section {
   background-color: #23232e;
   -webkit-transition: width 600ms ease;
   transition: width 600ms ease;
+  z-index: 10;
 }
 
 .nav-set {
@@ -79,9 +77,9 @@ section {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav-item {
@@ -126,7 +124,7 @@ section {
 .nav-link .nav-icon {
   width: 2rem;
   min-width: 2rem;
-  margin: 0 1.5rem;
+  margin: 0 0.5rem;
 }
 
 .logo {
@@ -151,7 +149,7 @@ section {
 .logo-text {
   display: inline;
   position: absolute;
-  left: -999px;
+  left: -876px;
   -webkit-transition: 600ms;
   transition: 600ms;
 }
@@ -163,6 +161,22 @@ section {
 
 /* Large screens - Navbar*/
 @media only screen and (min-width: 600px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    margin-top: 5vh;
+    -ms-scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+    overflow-y: auto;
+    height: 95vh;
+  }
+  /*Section*/
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    height: 100%;
+  }
   .nav-bar {
     top: 0;
     width: 5rem;
@@ -186,7 +200,7 @@ section {
 }
 
 /* Small screens - Navbar*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .nav-bar {
     top: 0;
     width: 100vw;
@@ -208,6 +222,9 @@ section {
   }
   main {
     margin: 0;
+  }
+  section {
+    padding-top: 5rem;
   }
   .smllscn {
     display: -webkit-box;
