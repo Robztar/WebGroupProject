@@ -1,6 +1,16 @@
+body{
+  background-image: linear-gradient(#f7f7f7,#d1eaff,#c2e0ff,#343a40);
 
+}
+html,body
+{
+    width: 100%;  
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
   .fixed{
-    background: url(images/19333449.jpg);
+    background: url(images/7Mpw.gif);
     position: fixed;
   }
   .fixed-background{
@@ -12,6 +22,9 @@
   position: relative;
   width: 100%;
   z-index: 1000!important;
+}
+#second-BG{
+  background-image: url();
 }
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
@@ -34,4 +47,50 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform;
+}
+.run{
+  background-image: linear-gradient(to right,rgb(38,38,38), rgb(214,57,51), rgb(228,156,17),rgb(214,57,51),rgb(38,38,38));
+}
+
+
+.nav-item{
+  padding: 8px 14px;
+}
+.action{
+  border-radius: 50px;
+  background-color: rgba(255, 103, 84, .2);
+}
+.action2{
+  background-color: #ff6754;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 0%;
+}
+
+/* blur background  */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
 }
