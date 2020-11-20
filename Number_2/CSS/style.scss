@@ -66,7 +66,7 @@ section {
 	background-color: $seccol1;
 	transition: width $transan ease;
 	z-index: 10;
-	
+	transition: 0.5s;
 }
 
 .nav-set {
@@ -303,6 +303,8 @@ section {
 }
 
 .exmain{
+	//top-auto
+	//display: block;
 	position: relative;
 	width: 100%;
      left: 0;
@@ -316,35 +318,39 @@ section {
 	position: absolute;
 	width: 100%;
      height: 100vh;
-     //top: 0;
      left: 0;
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transition: 0.5s;
 }
-.ex.weight{
+.ex.newb{
 	z-index: -1;
-	background-color: red;
 }
-.ex.fit{
+.ex.interm{
 	z-index: -2;
-	background-color: blue;
 }
-.ex.build{
+.ex.adv{
      z-index: -3;
-     background-color: turquoise;
 }
-.ex.athlet{
-     z-index: -4;
-     background-color: magenta;
-}
+
 
 
 header{
 	min-height: 100vh;
 	width: 100%;
-	background: url("/Number_2/Images/weight-rack.jpg") no-repeat top center / cover;
 	position: relative;
+}
+.eximg{
+	background: url("/Number_2/Images/weight-rack.jpg") no-repeat top center / cover;
+}
+.exbegin{
+	background: url("/Number_2/Images/Begin_situp.jpg") no-repeat top center / cover;
+}
+.exinte{
+	background: url("/Number_2/Images/Interm_Pullup.jpg") no-repeat top center / cover;
+}
+.exadv{
+	background: url("/Number_2/Images/Adv_muscle.jpg") no-repeat top center / cover;
 }
 .exlay{
 	position: absolute;
@@ -401,7 +407,6 @@ header{
 .excont.active .exmain{
 	transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
 	animation: main-animation 0.5s ease;
-	cursor: pointer;
 }
 @keyframes main-animation{
 	from{
@@ -412,11 +417,11 @@ header{
 	}
 }
 
-.excont.active .ex.weight{
-     animation: exweight 0.6s ease-out;
+.excont.active .ex.newb{
+     animation: noob 0.6s ease-out;
 	transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
 }
-@keyframes exweight{
+@keyframes noob{
 	0%{
 		transform: translate(0);
 	}
@@ -427,11 +432,11 @@ header{
           transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
      }
 }
-.excont.active .ex.fit{
-     animation: fit 0.6s ease-out;
+.excont.active .ex.interm{
+     animation: interm 0.6s ease-out;
 	transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
 }
-@keyframes fit{
+@keyframes interm{
 	0%{
 		transform: translate(0);
 	}
@@ -442,11 +447,11 @@ header{
           transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
      }
 }
-.excont.active .ex.build{
-     animation: build 0.6s ease-out;
+.excont.active .ex.adv{
+     animation: adv 0.6s ease-out;
 	transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
 }
-@keyframes build{
+@keyframes adv{
 	0%{
 		transform: translate(0);
 	}
@@ -455,21 +460,6 @@ header{
      }
      100%{
           transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-     }
-}
-.excont.active .ex.athlet{
-     animation: athlet 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
-}
-@keyframes athlet{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
      }
 }
 
@@ -517,6 +507,7 @@ ul{
 	animation: appear 0.5s forwards ease var(--i);
 }
 
+//overview - exmain
 @keyframes appear{
 	from{
 		opacity: 0;
@@ -536,7 +527,34 @@ ul{
 		opacity: 0;
 		transform: translateY(20px);
 	}
-	
+}
+
+//begin main
+//.newbbtn{}
+.newb-enter{
+	display: none;
+}
+.newb-in{
+	position: absolute;
+	width: 75rem;
+	height: 100vh - 18vh;
+	margin-top: 12vh;
+	margin-left: 5rem;
+	background-color: white;
+	border-radius: 25px;
+	padding: 2rem;
+	color: $txtcolb;
+}
+.newb-nav{
+	top: 0;
+	margin-top: 0.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 2rem;
+}
+.newb-serv{
+	margin-top: 2rem;
 }
 
 
