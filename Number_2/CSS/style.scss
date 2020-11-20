@@ -1,4 +1,4 @@
-/*Variables*/
+//Variables - change words to rgb/rgba/hex
 $maincol1: red;
 $maincol2: magenta; //or color: #df49a6;
 $maingrad: linear-gradient(135deg, $maincol1, $maincol2);//or no gradient theme
@@ -11,7 +11,7 @@ $primgrad: linear-gradient(45deg, $txtcolb, $txtcola);
 $secgrad: linear-gradient(to left, $seccol1, $txtcolc);
 $transan: 600ms;
 
-/*Functions*/
+//Functions
 @mixin topics($font, $color) {
 	text-align: left;
 	font-family: "Montserrat", "Courier New", Courier;
@@ -20,54 +20,47 @@ $transan: 600ms;
 	color: $color;
 }
 
-/*HTML-global*/
+//HTML-global
 :root{
 	font-size: 17px;
 	font-family: "Montserrat", "Courier New", Courier;
 }
 
-/*Body*/
+//Body
 body{
 	margin: 0;
 	padding: 0;
 }
 
-/*scroll*/
+//scroll
 ::-webkit-scrollbar {
-	width: 0.6rem;
+	width: 0.8rem;
 	background: $primgrad;
 }
 ::-webkit-scrollbar-thumb {
 	background: $maingrad;
-	border-radius: 6px;
+	border-radius: 10px;
 }
 
-/*Main*/
+//Main
 main{
 	margin-left: 5rem;
-	scroll-snap-type: y proximity;
+	scroll-snap-type: y mandatory;
 	overflow-y: auto;
 	
 }
-/*Section*/
+
+//Section
 section {
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
 }
-#home{
-	margin: 0;
-}
-#exercise{
-	margin: 0;
-}
-#u-events{
-	margin: 0;
-}
-#about{
-	margin: 0;
+
+.fresh-link{
+	filter: grayscale(0%) opacity(1) !important;
 }
 
-/*Navbar*/
+//Navbar
 .nav-bar {
 	position: fixed;
 	background-color: $seccol1;
@@ -131,7 +124,7 @@ section {
 	color: $txtcola;
 	background: $seccol1h;
 	font-size: 1.5rem;
-	letter-spacing: 0.3ch;
+	letter-spacing: 0.1ch;
 	width: 100%;
 }
 
@@ -151,19 +144,18 @@ section {
 	transform: rotate(180deg);
 }
 
-/* Large screens - Navbar*/
-@media only screen and (min-width: 600px) {
+// Large screens
+@media only screen and (min-width: 800px) {
 	body{
 		overflow: hidden;
 	}
 	main{
-		margin-top: 5vh;
+		
 		scroll-snap-type: y proximity;
 		overflow-y: auto;
-		height: 100vh - 5vh;
+		height: 100vh;
 		
 	}
-	/*Section*/
 	section {
 		scroll-snap-align: start;
 		scroll-snap-stop: normal;
@@ -175,8 +167,7 @@ section {
 		height: 100vh;
 		
 	}
-
-	.nav-bar:hover {
+	.nav-bar:hover{
 		width: 16rem;
 	}
 
@@ -199,8 +190,8 @@ section {
 	}
 }
 
-/* Small screens - Navbar*/
-@media only screen and (max-width: 1000px) {
+// Small screens
+@media only screen and (max-width: 800px) {
 	.nav-bar {
 		top: 0;
 		width: 100vw;
@@ -224,12 +215,337 @@ section {
 	}
 	
 	.smllscn{
-		display: flex;
+		display: inline-block;
+		width: 100%;
 	}
 }
 
-/*Text Divs*/
-.txtdiv{
-	padding-right: 1rem;
-	padding-left: 1rem;
+
+//Home
+#home{
+	margin: 0;
+}
+
+//Exercise - highly experimental ids and classes
+#exercise{
+	margin: 0;
+	transition: 1s;
+	opacity: 0;
+}
+
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+.excont{
+	max-height: 100vh;
+	width: 100%;
+	background-color: #485461;
+	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	overflow: hidden;
+	transform-style: preserve-3d;
+}
+
+.exnav{
+	position: relative;
+     top: 0;
+     left: 0;
+	width: 100%;
+	z-index: 10;
+	height: 11.2vh;
+}
+.exmenu{
+	max-width: 72rem;
+	width: 100%;
+	margin: 0 auto;
+	padding:0 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: $txtcola;
+}
+.exlogo{
+	font-size: 2rem;
+	letter-spacing: 1px;
+	line-height: 4rem;
+}
+.exham{
+	height: 4rem;
+	width: 3rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.tripbar{
+	width: 2rem;
+	height: 1.5px;
+	border-radius: 2px;
+	background-color: $txtcola;
+	transition: 0.5s;
+	position: relative;
+}
+.tripbar:before, .tripbar:after{
+	content: "";
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	background-color: $txtcola;
+	transition: 0.5s;
+}
+.tripbar:before{
+	transform: translateY(-10px);
+}
+.tripbar:after{
+	transform: translateY(10px);
+}
+
+.exmain{
+	position: relative;
+	width: 100%;
+     left: 0;
+     z-index: 5;
+     overflow: hidden;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transition: 0.5s;
+}
+.ex{
+	position: absolute;
+	width: 100%;
+     height: 100vh;
+     //top: 0;
+     left: 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transition: 0.5s;
+}
+.ex.weight{
+	z-index: -1;
+	background-color: red;
+}
+.ex.fit{
+	z-index: -2;
+	background-color: blue;
+}
+.ex.build{
+     z-index: -3;
+     background-color: turquoise;
+}
+.ex.athlet{
+     z-index: -4;
+     background-color: magenta;
+}
+
+
+header{
+	min-height: 100vh;
+	width: 100%;
+	background: url("/Number_2/Images/weight-rack.jpg") no-repeat top center / cover;
+	position: relative;
+}
+.exlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(57, 70, 83, 0.6);
+	display: flex;
+	justify-content: center;
+     align-items: center;
+     top:0;
+     left: 0;
+}
+.exin{
+	max-width: 40rem;
+	text-align: center;
+	padding: 0 2rem;
+	color: $txtcola;
+}
+.exin p{
+	margin-bottom: 3rem;
+}
+.extitle{
+	font-size: 3rem;
+}
+
+.exbtn{
+	margin-top: 1rem;
+	padding: 0.6rem 1.8rem;
+	background-color: $maincol2;
+	border: none;
+	border-radius: 25px;
+	color: $txtcola;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.exbtn:hover{
+	background-color: $maincol1;
+	color: $txtcola;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.excont.active .tripbar{
+	transform: rotate(360deg);
+	background-color: transparent;
+}
+
+.excont.active .tripbar:before{
+	transform: translateY(0) rotate(45deg);
+}
+.excont.active .tripbar::after{
+	transform: translateY(0) rotate(-45deg);
+}
+.excont.active .exmain{
+	transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+	animation: main-animation 0.5s ease;
+	cursor: pointer;
+}
+@keyframes main-animation{
+	from{
+		transform: translate(0);
+	}
+	to{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+	}
+}
+
+.excont.active .ex.weight{
+     animation: exweight 0.6s ease-out;
+	transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+}
+@keyframes exweight{
+	0%{
+		transform: translate(0);
+	}
+	5%{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+     }
+     100%{
+          transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+     }
+}
+.excont.active .ex.fit{
+     animation: fit 0.6s ease-out;
+	transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+}
+@keyframes fit{
+	0%{
+		transform: translate(0);
+	}
+	5%{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+     }
+     100%{
+          transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+     }
+}
+.excont.active .ex.build{
+     animation: build 0.6s ease-out;
+	transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+}
+@keyframes build{
+	0%{
+		transform: translate(0);
+	}
+	5%{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+     }
+     100%{
+          transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+     }
+}
+.excont.active .ex.athlet{
+     animation: athlet 0.6s ease-out;
+	transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
+}
+@keyframes athlet{
+	0%{
+		transform: translate(0);
+	}
+	5%{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+     }
+     100%{
+          transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
+     }
+}
+
+
+.excont.active .exlink{
+	position: absolute;
+	top: 0;
+	width: 30%;
+	right: 0.6rem;
+	height: 100vh;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.noscroll{
+	overflow: hidden;
+	height: 100vh;
+}
+
+ul{
+	list-style: none;
+}
+.exlink a{
+	text-decoration: none;
+	color: $txtcola;
+	padding: 1rem 0;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: 0.3s;
+	opacity: 0;
+	transform: translateY(10px);
+	animation: hide 0.5s forwards ease;
+}
+
+.exlink a:hover{
+	color: $txtcola;
+	text-decoration: none;
+}
+
+.excont.active .exlink a{
+	animation: appear 0.5s forwards ease var(--i);
+}
+
+@keyframes appear{
+	from{
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@keyframes hide{
+	from{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	to{
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	
+}
+
+
+//Upcoming Events
+#u-events{
+	margin: 0;
+}
+
+//About
+#about{
+	margin: 0;
 }
