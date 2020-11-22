@@ -2,6 +2,7 @@
 $maincol1: red;
 $maincol2: magenta; //or color: #df49a6;
 $maingrad: linear-gradient(135deg, $maincol1, $maincol2);//or no gradient theme
+//$transparent: transparent;
 $seccol1: #23232e;
 $seccol1h: #141418;
 $txtcola: white;
@@ -35,7 +36,7 @@ body{
 //scroll
 ::-webkit-scrollbar {
 	width: 0.8rem;
-	background: $primgrad;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.192) 30%,rgba(255, 255, 255, 0) );
 }
 ::-webkit-scrollbar-thumb {
 	background: $maingrad;
@@ -44,10 +45,10 @@ body{
 
 //Main
 main{
-	margin-left: 5rem;
+	//padding-left: 5rem;
 	scroll-snap-type: y mandatory;
 	overflow-y: auto;
-	
+	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%)
 }
 
 //Section
@@ -63,10 +64,10 @@ section {
 //Navbar
 .nav-bar {
 	position: fixed;
-	background-color: $seccol1;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 2rem;
 	transition: width $transan ease;
 	z-index: 10;
-	transition: 0.5s;
 }
 
 .nav-set {
@@ -88,15 +89,15 @@ section {
 	display: flex;
 	align-items: center;
 	height: 5rem;
+	font-size: 1.1rem;
 	color: $txtcolc;
 	text-decoration: none;
 	filter: grayscale(100%) opacity(0.7);
-	transition: $transan;
+	transition: $transan ease;
 }
 
 .nav-link:hover {
 	filter: grayscale(0%) opacity(1);
-	background: $seccol1h;
 	color: $txtcola;
 }
 
@@ -108,7 +109,7 @@ section {
 .nav-icon{
 	font-size: 2rem;
 	color: $maincol2;
-	transition: $transan;
+	transition: $transan ease;
 }
 .nav-link .nav-icon {
 	width: 2rem;
@@ -122,22 +123,23 @@ section {
 	margin-bottom: 1rem;
 	text-align: center;
 	color: $txtcola;
-	background: $seccol1h;
-	font-size: 1.5rem;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.192) ,rgba(255, 255, 255, 0) );
+	border-radius: 2rem;
 	letter-spacing: 0.1ch;
 	width: 100%;
 }
 
 .logo .nav-icon {
 	transform: rotate(0deg);
-	transition: $transan;
+	transition: $transan ease;
 }
 
 .logo-text{
+	font-size: 1.5rem;
 	display: inline;
 	position: absolute;
 	left: -876px;
-	transition: $transan;
+	transition: $transan ease-out;
 }
 
 .nav-bar:hover .logo .nav-icon{
@@ -164,8 +166,8 @@ section {
 	.nav-bar {
 		top: 0;
 		width: 5rem;
-		height: 100vh;
-		
+		height: 88%; //100%
+		margin-top: 3%;
 	}
 	.nav-bar:hover{
 		width: 16rem;
@@ -193,6 +195,7 @@ section {
 // Small screens
 @media only screen and (max-width: 800px) {
 	.nav-bar {
+		background: rgba(255, 255, 255, 0.192);
 		top: 0;
 		width: 100vw;
 		height: 5rem;
@@ -220,11 +223,6 @@ section {
 	}
 }
 
-
-//Home
-#home{
-	margin: 0;
-}
 
 //Exercise - highly experimental ids and classes
 #exercise{
@@ -267,6 +265,7 @@ section {
 	color: $txtcola;
 }
 .exlogo{
+	margin-left: 5%;
 	font-size: 2rem;
 	letter-spacing: 1px;
 	line-height: 4rem;
@@ -333,8 +332,6 @@ section {
      z-index: -3;
 }
 
-
-
 header{
 	min-height: 100vh;
 	width: 100%;
@@ -345,6 +342,7 @@ header{
 }
 .exbegin{
 	background: url("/Number_2/Images/Begin_situp.jpg") no-repeat top center / cover;
+	transition: 0.5s;
 }
 .exinte{
 	background: url("/Number_2/Images/Interm_Pullup.jpg") no-repeat top center / cover;
@@ -401,7 +399,7 @@ header{
 .excont.active .tripbar:before{
 	transform: translateY(0) rotate(45deg);
 }
-.excont.active .tripbar::after{
+.excont.active .tripbar:after{
 	transform: translateY(0) rotate(-45deg);
 }
 .excont.active .exmain{
@@ -529,41 +527,193 @@ ul{
 	}
 }
 
+//ex-esgment main
+.exseg-in{
+	position: absolute;
+	width: 85%;
+	height: 100vh - 18vh;
+	margin-top: 12vh;
+	margin-left: 10%;
+	background-color: white;
+	border-radius: 25px;
+	padding: 1rem;
+	color: $txtcolb;
+}
+
+.exseg-nav{
+	top: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 3rem;
+	padding: 0.5rem;
+	border-radius: 3rem;
+	background: rgba(209, 209, 209, 0.3);
+}
+
+.exseg-links{
+	height: 2rem;
+	padding: 0 10px 0 10px;
+	background: transparent;
+	color: $txtcolb;
+	font-size: 1.1rem;
+	font-style: bold;
+	text-decoration: none;
+	border-radius: 3rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	transition: 0.3s ease-in-out;
+}
+.exseg-links:hover{
+	background:$maincol2;
+	color: $txtcola;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.exseg-nav a i{
+	color: $maincol2;;
+	font-size: 2rem;
+	transition: 0.3s ease-in-out;
+}
+.exseg-nav a i:hover{
+	color: $maincol1;
+	transition: 0.3s;
+}
+.exseg-serv{
+	position: relative;
+	margin: 1rem 0 1rem 0;
+	padding: 1rem;
+	background: rgba(209, 209, 209, 0.3);
+	border-radius: 25px;
+	min-height: 68vh;
+}
+.exseg-start{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	//flex-direction: column;
+}
+.exseg-card{
+	margin: 3rem;
+	padding: 0.5rem;
+	left: 3rem;
+	width: 85%;
+	background: rgba(209, 209, 209, 0.3);
+	border-radius: 15px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.exseg-card:hover{
+	background: $maingrad;
+	transform: translateY(-20px);
+}
+
+.exseg-pop{
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 7;
+	background: white;
+	width: 100%;
+	height: 82vh;
+	border-radius: 25px;
+	animation: fadeInOut 0.5s ease-in-out;
+}
+@keyframes fadeInOut{
+	0%{
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
+	
+	100%{
+		height: 82vh;
+		width: 100%;
+		opacity: 1;
+	}
+}
+.exseg-pop i{
+	border-radius: 50%;
+	margin: 1rem;
+	margin-left: 95%;
+	font-size: 2rem;
+	color: gray;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+.exseg-pop i:hover{
+	color: $maincol1;
+	transition: 0.3s ease;
+}
+.pop-cont{
+	margin: 5% 2% 5% 2%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
 //begin main
 //.newbbtn{}
 .newb-enter{
 	display: none;
+	transition: 0.5s;
 }
-.newb-in{
-	position: absolute;
-	width: 75rem;
-	height: 100vh - 18vh;
-	margin-top: 12vh;
-	margin-left: 5rem;
-	background-color: white;
-	border-radius: 25px;
-	padding: 2rem;
-	color: $txtcolb;
+
+/*.n-fit-link{}
+.n-mscl-link{}
+.newb-start{}*/
+
+.newb-fit{
+	display: none;
 }
-.newb-nav{
-	top: 0;
-	margin-top: 0.5rem;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	height: 2rem;
+
+.newb-mscl{
+	display: none;
 }
-.newb-serv{
-	margin-top: 2rem;
+
+//intermediate main
+.interm-enter{
+	display: none;
+	transition: 0.5s;
+}
+
+.interm-fit{
+	display: none;
+}
+.interm-mscl{
+	display: none;
 }
 
 
+//Advanced main
+.adv-enter{
+	display: none;
+	transition: 0.5s;
+}
+
+.adv-fit{
+	display: none;
+}
+.adv-mscl{
+	display: none;
+}
+
+
+
+//Home
+#home{
+	margin: 0;
+	padding-left: 5rem;
+}
 //Upcoming Events
 #u-events{
 	margin: 0;
+	padding-left: 5rem;
 }
-
 //About
 #about{
 	margin: 0;
+	padding-left: 5rem;
 }
