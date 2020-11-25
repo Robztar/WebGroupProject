@@ -46,6 +46,7 @@ body{
 //Main
 main{
 	//padding-left: 5rem;
+	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory;
 	overflow-y: auto;
 	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%)
@@ -147,7 +148,7 @@ section {
 }
 
 // Large screens
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
 	body{
 		overflow: hidden;
 	}
@@ -190,6 +191,185 @@ section {
 	.smllscn{
 		display: none;
 	}
+	//Home
+	#home{
+		padding-left: 5rem;
+	}
+	//Upcoming Events
+	#u-events{
+		padding-left: 5rem;
+	}
+	//About
+	#about{
+		padding-left: 5rem;
+	}
+
+	//Exercise - Large Screen Animation Control
+	#exercise{
+		opacity: 0;
+	}
+	.excont{
+		transform-style: preserve-3d;
+		background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	}
+	.exnav{
+		height: 11.2vh;
+		z-index: 10;
+	}
+	.exin{
+		padding: 0 2rem;
+		color: $txtcola;
+	}
+	.exin p{
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+	}
+	
+	.excont.active .exmain{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		animation: main-animation 0.5s ease;
+	}
+	@keyframes main-animation{
+		from{
+			transform: translate(0);
+		}
+		to{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+	}
+	
+	.excont.active .ex.newb{
+		animation: noob 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+	}
+	@keyframes noob{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+		}
+	}
+	.excont.active .ex.interm{
+		animation: interm 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+	}
+	@keyframes interm{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+		}
+	}
+	.excont.active .ex.adv{
+		animation: adv 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+	}
+	@keyframes adv{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+		}
+	}
+	
+	
+	.excont.active .exlink{
+		width: 30%;
+		right: 0.6rem;
+		
+	}
+	
+	.excont.active .ex.newb{
+		animation: noob 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+	}
+	@keyframes noob{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+		}
+	}
+	.excont.active .ex.interm{
+		animation: interm 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+	}
+	@keyframes interm{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+		}
+	}
+	.excont.active .ex.adv{
+		animation: adv 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+	}
+	@keyframes adv{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+		}
+	}
+	
+	.excont.active .exlink{
+		//position: absolute;
+		top: 0;
+		width: 30%;
+		right: 0.6rem;
+		height: 100vh;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.noscroll{
+		overflow: hidden;
+		height: 100vh;
+	}
+	.exseg-in{
+		width: 85%;
+		height: 100vh - 18vh;
+		margin-top: 12vh;
+		margin-left: 10%;
+	}
+	.exseg-serv{/*
+		position: relative;
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+		background: rgba(209, 209, 209, 0.3);
+		border-radius: 25px;*/
+		min-height: 68vh;
+	}
+	.exseg-serv{
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+	}
 }
 
 // Small screens
@@ -199,6 +379,7 @@ section {
 		top: 0;
 		width: 100vw;
 		height: 5rem;
+		margin-right: 0.6rem;
 	}
 	.logo {
 		display: none;
@@ -216,10 +397,59 @@ section {
 	section{
 		padding-top: 5rem;
 	}
-	
+	::-webkit-scrollbar {
+		width: 0.5rem;
+	}
 	.smllscn{
 		display: inline-block;
 		width: 100%;
+	}
+	
+
+	//Exercise - Small Screen Animation Control
+	
+	.excont.active .exmain{
+		opacity: 0;
+	}
+	.excont.active .ex{
+		opacity: 0;
+	}
+	.excont{
+		background: transparent;
+		height: 95%;
+	}
+	.exnav{
+		background: linear-gradient(135deg, #48546100,$maincol2,$maincol1);
+		height: auto;
+		z-index: 7;
+	}
+	.exin p{
+		margin-bottom: 2rem;
+	}
+	.excont.active .exlink{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	}
+
+	.exseg-in{
+		width: 100%;
+		height: auto;
+		margin-top: 1rem;
+	}
+	.exseg-serv{/*
+		position: relative;
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+		background: rgba(209, 209, 209, 0.3);
+		border-radius: 25px;
+		min-height: 68vh;*/
+		height: auto;
+	}
+	.exseg-serv{
+		margin: 0.3rem 0 0.3rem 0;
+		padding: 0.3rem;
 	}
 }
 
@@ -227,8 +457,7 @@ section {
 //Exercise - highly experimental ids and classes
 #exercise{
 	margin: 0;
-	transition: 1s;
-	opacity: 0;
+	transition: 0.5s;
 }
 
 *{
@@ -240,19 +469,22 @@ section {
 .excont{
 	max-height: 100vh;
 	width: 100%;
-	background-color: #485461;
-	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	//background-color: #485461;
+
 	overflow: hidden;
-	transform-style: preserve-3d;
+	//transform-style: preserve-3d; small
 }
 
 .exnav{
+	//let position remain relative for small screen (or until further notice)
 	position: relative;
+	//position: fixed;
      top: 0;
      left: 0;
 	width: 100%;
-	z-index: 10;
-	height: 11.2vh;
+	
+	//height: 11.2vh;
+	//transition: 100ms;
 }
 .exmenu{
 	max-width: 72rem;
@@ -300,15 +532,14 @@ section {
 .tripbar:after{
 	transform: translateY(10px);
 }
-
 .exmain{
 	//top-auto
 	//display: block;
 	position: relative;
 	width: 100%;
-     left: 0;
-     z-index: 5;
-     overflow: hidden;
+	left: 0;
+	z-index: 5;
+	overflow: hidden;
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transition: 0.5s;
@@ -316,8 +547,8 @@ section {
 .ex{
 	position: absolute;
 	width: 100%;
-     height: 100vh;
-     left: 0;
+	height: 100vh;
+	left: 0;
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transition: 0.5s;
@@ -329,7 +560,7 @@ section {
 	z-index: -2;
 }
 .ex.adv{
-     z-index: -3;
+	z-index: -3;
 }
 
 header{
@@ -338,17 +569,17 @@ header{
 	position: relative;
 }
 .eximg{
-	background: url("/Number_2/Images/weight-rack.jpg") no-repeat top center / cover;
+	background: url("../Images/weight-rack.jpg") no-repeat top center / cover;
 }
 .exbegin{
-	background: url("/Number_2/Images/Begin_situp.jpg") no-repeat top center / cover;
+	background: url("../Images/Begin_situp.jpg") no-repeat top center / cover;
 	transition: 0.5s;
 }
 .exinte{
-	background: url("/Number_2/Images/Interm_Pullup.jpg") no-repeat top center / cover;
+	background: url("../Images/Interm_Pullup.jpg") no-repeat top center / cover;
 }
 .exadv{
-	background: url("/Number_2/Images/Adv_muscle.jpg") no-repeat top center / cover;
+	background: url("../Images/Adv_muscle.jpg") no-repeat top center / cover;
 }
 .exlay{
 	position: absolute;
@@ -357,18 +588,14 @@ header{
 	background-color: rgba(57, 70, 83, 0.6);
 	display: flex;
 	justify-content: center;
-     align-items: center;
-     top:0;
-     left: 0;
+	align-items: center;
+	top:0;
+	left: 0;
 }
 .exin{
 	max-width: 40rem;
 	text-align: center;
-	padding: 0 2rem;
 	color: $txtcola;
-}
-.exin p{
-	margin-bottom: 3rem;
 }
 .extitle{
 	font-size: 3rem;
@@ -402,77 +629,16 @@ header{
 .excont.active .tripbar:after{
 	transform: translateY(0) rotate(-45deg);
 }
-.excont.active .exmain{
-	transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-	animation: main-animation 0.5s ease;
-}
-@keyframes main-animation{
-	from{
-		transform: translate(0);
-	}
-	to{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-	}
-}
-
-.excont.active .ex.newb{
-     animation: noob 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
-}
-@keyframes noob{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
-     }
-}
-.excont.active .ex.interm{
-     animation: interm 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
-}
-@keyframes interm{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
-     }
-}
-.excont.active .ex.adv{
-     animation: adv 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-}
-@keyframes adv{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-     }
-}
-
-
 .excont.active .exlink{
 	position: absolute;
 	top: 0;
-	width: 30%;
-	right: 0.6rem;
 	height: 100vh;
 	z-index: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .noscroll{
 	overflow: hidden;
 	height: 100vh;
@@ -505,7 +671,6 @@ ul{
 	animation: appear 0.5s forwards ease var(--i);
 }
 
-//overview - exmain
 @keyframes appear{
 	from{
 		opacity: 0;
@@ -530,10 +695,6 @@ ul{
 //ex-esgment main
 .exseg-in{
 	position: absolute;
-	width: 85%;
-	height: 100vh - 18vh;
-	margin-top: 12vh;
-	margin-left: 10%;
 	background-color: white;
 	border-radius: 25px;
 	padding: 1rem;
@@ -583,23 +744,19 @@ ul{
 }
 .exseg-serv{
 	position: relative;
-	margin: 1rem 0 1rem 0;
-	padding: 1rem;
 	background: rgba(209, 209, 209, 0.3);
 	border-radius: 25px;
-	min-height: 68vh;
 }
 .exseg-start{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	//flex-direction: column;
 }
 .exseg-card{
 	margin: 3rem;
 	padding: 0.5rem;
 	left: 3rem;
-	width: 85%;
+	width: 100%;
 	background: rgba(209, 209, 209, 0.3);
 	border-radius: 15px;
 	transition: 0.5s;
@@ -608,6 +765,11 @@ ul{
 .exseg-card:hover{
 	background: $maingrad;
 	transform: translateY(-20px);
+}
+.exseg-card img{
+	height: 7rem;
+	width: 7rem;
+	//align-items: center;
 }
 
 .exseg-pop{
@@ -648,10 +810,9 @@ ul{
 	transition: 0.3s ease;
 }
 .pop-cont{
-	margin: 5% 2% 5% 2%;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-start;
+	margin: 5%;
+	height: 70%;
+	overflow: auto;
 }
 
 //begin main
@@ -700,20 +861,15 @@ ul{
 	display: none;
 }
 
-
-
-//Home
 #home{
 	margin: 0;
-	padding-left: 5rem;
 }
 //Upcoming Events
 #u-events{
 	margin: 0;
-	padding-left: 5rem;
 }
 //About
 #about{
 	margin: 0;
-	padding-left: 5rem;
 }
+

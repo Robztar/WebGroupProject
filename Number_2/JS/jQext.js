@@ -1,21 +1,3 @@
-/*
-$(document).ready(() =>
-{
-  //Reveals hidden div
-  $('.ex-btn').on('click',() =>
-  {
-    $('#sect-ex').css('display','block');
-  });
-
-  //Should hide the card layout (doesn't work yet)
-  $('.ex-btn').on('click',() =>
-  {
-    $('#ex-main').css('display','none');
-  });
-  
-});
-*/
-
 $(document).ready(() =>
 {
   //hamburger view toggle
@@ -194,7 +176,8 @@ $(document).ready(() =>
   const vheight = $(window).height();
 
   const hTop = 0;
-  const hMid = vheight/2;
+  //const hMid = vheight/2;
+  const hMid = (vheight/3)*2;
   const exTop = vheight;
   const exMid= vheight*1.5;
   const upTop= vheight*2;
@@ -207,6 +190,7 @@ $(document).ready(() =>
   $('main').scroll(function(){
     var pos = $(this).scrollTop();
 
+    //navbar track
     $('.home').toggleClass('fresh-link',pos<vheight);
     
     if(pos>=vheight){
@@ -226,14 +210,20 @@ $(document).ready(() =>
     $('.about').toggleClass('fresh-link',pos>=aTop);
 
 
-
-    if(pos>hMid && pos<exMid){
-      $("#exercise").css("opacity","1");
-      $('.exnav').css('position','fixed');
-    }
-    else{
-      $("#exercise").css("opacity","0");
-      $('.exnav').css('position','relative');
+    //exercise fade in/out
+    //responsive to width>800 & height>600/650
+    if($(window).width()>800){
+      if(pos>hMid && pos<exMid){
+        $("#exercise").css("opacity","1");
+        $('.exnav').css({"display, block":"opacity,1"});
+        $('.exnav').css('position','fixed');
+        //exnav jumps, not fade
+      }
+      else{
+        $("#exercise").css("opacity","0");
+        $('.exnav').css({"display, none":"opacity,0"});
+        $('.exnav').css('position','relative');
+      }
     }
     
     //Other sections if I feel like
@@ -299,6 +289,7 @@ $(document).ready(() =>
   //interm-fit popup
   $('.i-fit-link').on('click',()=>{
     $('.interm-fit').toggle();
+    //$('main').toggleClass('noscroll');
   });
   $('.interm-fit i').on('click',()=>{
     $('.interm-fit').toggle();
