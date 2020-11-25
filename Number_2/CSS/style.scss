@@ -2,6 +2,7 @@
 $maincol1: red;
 $maincol2: magenta; //or color: #df49a6;
 $maingrad: linear-gradient(135deg, $maincol1, $maincol2);//or no gradient theme
+//$transparent: transparent;
 $seccol1: #23232e;
 $seccol1h: #141418;
 $txtcola: white;
@@ -35,7 +36,7 @@ body{
 //scroll
 ::-webkit-scrollbar {
 	width: 0.8rem;
-	background: $primgrad;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.192) 30%,rgba(255, 255, 255, 0) );
 }
 ::-webkit-scrollbar-thumb {
 	background: $maingrad;
@@ -44,10 +45,11 @@ body{
 
 //Main
 main{
-	margin-left: 5rem;
+	//padding-left: 5rem;
+	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory;
 	overflow-y: auto;
-	
+	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%)
 }
 
 //Section
@@ -63,10 +65,10 @@ section {
 //Navbar
 .nav-bar {
 	position: fixed;
-	background-color: $seccol1;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 2rem;
 	transition: width $transan ease;
 	z-index: 10;
-	
 }
 
 .nav-set {
@@ -88,15 +90,15 @@ section {
 	display: flex;
 	align-items: center;
 	height: 5rem;
+	font-size: 1.1rem;
 	color: $txtcolc;
 	text-decoration: none;
 	filter: grayscale(100%) opacity(0.7);
-	transition: $transan;
+	transition: $transan ease;
 }
 
 .nav-link:hover {
 	filter: grayscale(0%) opacity(1);
-	background: $seccol1h;
 	color: $txtcola;
 }
 
@@ -108,7 +110,7 @@ section {
 .nav-icon{
 	font-size: 2rem;
 	color: $maincol2;
-	transition: $transan;
+	transition: $transan ease;
 }
 .nav-link .nav-icon {
 	width: 2rem;
@@ -122,22 +124,23 @@ section {
 	margin-bottom: 1rem;
 	text-align: center;
 	color: $txtcola;
-	background: $seccol1h;
-	font-size: 1.5rem;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.192) ,rgba(255, 255, 255, 0) );
+	border-radius: 2rem;
 	letter-spacing: 0.1ch;
 	width: 100%;
 }
 
 .logo .nav-icon {
 	transform: rotate(0deg);
-	transition: $transan;
+	transition: $transan ease;
 }
 
 .logo-text{
+	font-size: 1.5rem;
 	display: inline;
 	position: absolute;
 	left: -876px;
-	transition: $transan;
+	transition: $transan ease-out;
 }
 
 .nav-bar:hover .logo .nav-icon{
@@ -145,7 +148,7 @@ section {
 }
 
 // Large screens
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
 	body{
 		overflow: hidden;
 	}
@@ -164,8 +167,8 @@ section {
 	.nav-bar {
 		top: 0;
 		width: 5rem;
-		height: 100vh;
-		
+		height: 88%; //100%
+		margin-top: 3%;
 	}
 	.nav-bar:hover{
 		width: 16rem;
@@ -188,14 +191,195 @@ section {
 	.smllscn{
 		display: none;
 	}
+	//Home
+	#home{
+		padding-left: 5rem;
+	}
+	//Upcoming Events
+	#u-events{
+		padding-left: 5rem;
+	}
+	//About
+	#about{
+		padding-left: 5rem;
+	}
+
+	//Exercise - Large Screen Animation Control
+	#exercise{
+		opacity: 0;
+	}
+	.excont{
+		transform-style: preserve-3d;
+		background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	}
+	.exnav{
+		height: 11.2vh;
+		z-index: 10;
+	}
+	.exin{
+		padding: 0 2rem;
+		color: $txtcola;
+	}
+	.exin p{
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+	}
+	
+	.excont.active .exmain{
+		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		animation: main-animation 0.5s ease;
+	}
+	@keyframes main-animation{
+		from{
+			transform: translate(0);
+		}
+		to{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+	}
+	
+	.excont.active .ex.newb{
+		animation: noob 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+	}
+	@keyframes noob{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+		}
+	}
+	.excont.active .ex.interm{
+		animation: interm 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+	}
+	@keyframes interm{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+		}
+	}
+	.excont.active .ex.adv{
+		animation: adv 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+	}
+	@keyframes adv{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+		}
+	}
+	
+	
+	.excont.active .exlink{
+		width: 30%;
+		right: 0.6rem;
+		
+	}
+	
+	.excont.active .ex.newb{
+		animation: noob 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+	}
+	@keyframes noob{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
+		}
+	}
+	.excont.active .ex.interm{
+		animation: interm 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+	}
+	@keyframes interm{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
+		}
+	}
+	.excont.active .ex.adv{
+		animation: adv 0.6s ease-out;
+		transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+	}
+	@keyframes adv{
+		0%{
+			transform: translate(0);
+		}
+		5%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
+		}
+		100%{
+			transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
+		}
+	}
+	
+	.excont.active .exlink{
+		//position: absolute;
+		top: 0;
+		width: 30%;
+		right: 0.6rem;
+		height: 100vh;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.noscroll{
+		overflow: hidden;
+		height: 100vh;
+	}
+	.exseg-in{
+		width: 85%;
+		height: 100vh - 18vh;
+		margin-top: 12vh;
+		margin-left: 10%;
+	}
+	.exseg-serv{/*
+		position: relative;
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+		background: rgba(209, 209, 209, 0.3);
+		border-radius: 25px;*/
+		min-height: 68vh;
+	}
+	.exseg-serv{
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+	}
 }
 
 // Small screens
 @media only screen and (max-width: 800px) {
 	.nav-bar {
+		background: rgba(255, 255, 255, 0.192);
 		top: 0;
 		width: 100vw;
 		height: 5rem;
+		margin-right: 0.6rem;
 	}
 	.logo {
 		display: none;
@@ -213,24 +397,67 @@ section {
 	section{
 		padding-top: 5rem;
 	}
-	
+	::-webkit-scrollbar {
+		width: 0.5rem;
+	}
 	.smllscn{
 		display: inline-block;
 		width: 100%;
 	}
+	
+
+	//Exercise - Small Screen Animation Control
+	
+	.excont.active .exmain{
+		opacity: 0;
+	}
+	.excont.active .ex{
+		opacity: 0;
+	}
+	.excont{
+		background: transparent;
+		height: 95%;
+	}
+	.exnav{
+		background: linear-gradient(135deg, #48546100,$maincol2,$maincol1);
+		height: auto;
+		z-index: 7;
+	}
+	.exin p{
+		margin-bottom: 2rem;
+	}
+	.excont.active .exlink{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	}
+
+	.exseg-in{
+		width: 100%;
+		height: auto;
+		margin-top: 1rem;
+	}
+	.exseg-serv{/*
+		position: relative;
+		margin: 1rem 0 1rem 0;
+		padding: 1rem;
+		background: rgba(209, 209, 209, 0.3);
+		border-radius: 25px;
+		min-height: 68vh;*/
+		height: auto;
+	}
+	.exseg-serv{
+		margin: 0.3rem 0 0.3rem 0;
+		padding: 0.3rem;
+	}
 }
 
-
-//Home
-#home{
-	margin: 0;
-}
 
 //Exercise - highly experimental ids and classes
 #exercise{
 	margin: 0;
-	transition: 1s;
-	opacity: 0;
+	transition: 0.5s;
 }
 
 *{
@@ -242,19 +469,22 @@ section {
 .excont{
 	max-height: 100vh;
 	width: 100%;
-	background-color: #485461;
-	background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+	//background-color: #485461;
+
 	overflow: hidden;
-	transform-style: preserve-3d;
+	//transform-style: preserve-3d; small
 }
 
 .exnav{
+	//let position remain relative for small screen (or until further notice)
 	position: relative;
+	//position: fixed;
      top: 0;
      left: 0;
 	width: 100%;
-	z-index: 10;
-	height: 11.2vh;
+	
+	//height: 11.2vh;
+	//transition: 100ms;
 }
 .exmenu{
 	max-width: 72rem;
@@ -267,6 +497,7 @@ section {
 	color: $txtcola;
 }
 .exlogo{
+	margin-left: 5%;
 	font-size: 2rem;
 	letter-spacing: 1px;
 	line-height: 4rem;
@@ -301,13 +532,14 @@ section {
 .tripbar:after{
 	transform: translateY(10px);
 }
-
 .exmain{
+	//top-auto
+	//display: block;
 	position: relative;
 	width: 100%;
-     left: 0;
-     z-index: 5;
-     overflow: hidden;
+	left: 0;
+	z-index: 5;
+	overflow: hidden;
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transition: 0.5s;
@@ -315,36 +547,39 @@ section {
 .ex{
 	position: absolute;
 	width: 100%;
-     height: 100vh;
-     //top: 0;
-     left: 0;
+	height: 100vh;
+	left: 0;
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transition: 0.5s;
 }
-.ex.weight{
+.ex.newb{
 	z-index: -1;
-	background-color: red;
 }
-.ex.fit{
+.ex.interm{
 	z-index: -2;
-	background-color: blue;
 }
-.ex.build{
-     z-index: -3;
-     background-color: turquoise;
+.ex.adv{
+	z-index: -3;
 }
-.ex.athlet{
-     z-index: -4;
-     background-color: magenta;
-}
-
 
 header{
 	min-height: 100vh;
 	width: 100%;
-	background: url("/Number_2/Images/weight-rack.jpg") no-repeat top center / cover;
 	position: relative;
+}
+.eximg{
+	background: url("../Images/weight-rack.jpg") no-repeat top center / cover;
+}
+.exbegin{
+	background: url("../Images/Begin_situp.jpg") no-repeat top center / cover;
+	transition: 0.5s;
+}
+.exinte{
+	background: url("../Images/Interm_Pullup.jpg") no-repeat top center / cover;
+}
+.exadv{
+	background: url("../Images/Adv_muscle.jpg") no-repeat top center / cover;
 }
 .exlay{
 	position: absolute;
@@ -353,18 +588,14 @@ header{
 	background-color: rgba(57, 70, 83, 0.6);
 	display: flex;
 	justify-content: center;
-     align-items: center;
-     top:0;
-     left: 0;
+	align-items: center;
+	top:0;
+	left: 0;
 }
 .exin{
 	max-width: 40rem;
 	text-align: center;
-	padding: 0 2rem;
 	color: $txtcola;
-}
-.exin p{
-	margin-bottom: 3rem;
 }
 .extitle{
 	font-size: 3rem;
@@ -395,96 +626,19 @@ header{
 .excont.active .tripbar:before{
 	transform: translateY(0) rotate(45deg);
 }
-.excont.active .tripbar::after{
+.excont.active .tripbar:after{
 	transform: translateY(0) rotate(-45deg);
 }
-.excont.active .exmain{
-	transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-	animation: main-animation 0.5s ease;
-	cursor: pointer;
-}
-@keyframes main-animation{
-	from{
-		transform: translate(0);
-	}
-	to{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-	}
-}
-
-.excont.active .ex.weight{
-     animation: exweight 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
-}
-@keyframes exweight{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(320px) scale(0.5);
-     }
-}
-.excont.active .ex.fit{
-     animation: fit 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
-}
-@keyframes fit{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(240px) scale(0.5);
-     }
-}
-.excont.active .ex.build{
-     animation: build 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-}
-@keyframes build{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(160px) scale(0.5);
-     }
-}
-.excont.active .ex.athlet{
-     animation: athlet 0.6s ease-out;
-	transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
-}
-@keyframes athlet{
-	0%{
-		transform: translate(0);
-	}
-	5%{
-		transform: perspective(1300px) rotateY(20deg) translateZ(400px) scale(0.5);
-     }
-     100%{
-          transform: perspective(1300px) rotateY(20deg) translateZ(80px) scale(0.5);
-     }
-}
-
-
 .excont.active .exlink{
 	position: absolute;
 	top: 0;
-	width: 30%;
-	right: 0.6rem;
 	height: 100vh;
 	z-index: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .noscroll{
 	overflow: hidden;
 	height: 100vh;
@@ -536,16 +690,186 @@ ul{
 		opacity: 0;
 		transform: translateY(20px);
 	}
+}
+
+//ex-esgment main
+.exseg-in{
+	position: absolute;
+	background-color: white;
+	border-radius: 25px;
+	padding: 1rem;
+	color: $txtcolb;
+}
+
+.exseg-nav{
+	top: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 3rem;
+	padding: 0.5rem;
+	border-radius: 3rem;
+	background: rgba(209, 209, 209, 0.3);
+}
+
+.exseg-links{
+	height: 2rem;
+	padding: 0 10px 0 10px;
+	background: transparent;
+	color: $txtcolb;
+	font-size: 1.1rem;
+	font-style: bold;
+	text-decoration: none;
+	border-radius: 3rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	transition: 0.3s ease-in-out;
+}
+.exseg-links:hover{
+	background:$maincol2;
+	color: $txtcola;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.exseg-nav a i{
+	color: $maincol2;;
+	font-size: 2rem;
+	transition: 0.3s ease-in-out;
+}
+.exseg-nav a i:hover{
+	color: $maincol1;
+	transition: 0.3s;
+}
+.exseg-serv{
+	position: relative;
+	background: rgba(209, 209, 209, 0.3);
+	border-radius: 25px;
+}
+.exseg-start{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.exseg-card{
+	margin: 3rem;
+	padding: 0.5rem;
+	left: 3rem;
+	width: 100%;
+	background: rgba(209, 209, 209, 0.3);
+	border-radius: 15px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.exseg-card:hover{
+	background: $maingrad;
+	transform: translateY(-20px);
+}
+.exseg-card img{
+	height: 7rem;
+	width: 7rem;
+	//align-items: center;
+}
+
+.exseg-pop{
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 7;
+	background: white;
+	width: 100%;
+	height: 82vh;
+	border-radius: 25px;
+	animation: fadeInOut 0.5s ease-in-out;
+}
+@keyframes fadeInOut{
+	0%{
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
 	
+	100%{
+		height: 82vh;
+		width: 100%;
+		opacity: 1;
+	}
+}
+.exseg-pop i{
+	border-radius: 50%;
+	margin: 1rem;
+	margin-left: 95%;
+	font-size: 2rem;
+	color: gray;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+.exseg-pop i:hover{
+	color: $maincol1;
+	transition: 0.3s ease;
+}
+.pop-cont{
+	margin: 5%;
+	height: 70%;
+	overflow: auto;
+}
+
+//begin main
+//.newbbtn{}
+.newb-enter{
+	display: none;
+	transition: 0.5s;
+}
+
+/*.n-fit-link{}
+.n-mscl-link{}
+.newb-start{}*/
+
+.newb-fit{
+	display: none;
+}
+
+.newb-mscl{
+	display: none;
+}
+
+//intermediate main
+.interm-enter{
+	display: none;
+	transition: 0.5s;
+}
+
+.interm-fit{
+	display: none;
+}
+.interm-mscl{
+	display: none;
 }
 
 
+//Advanced main
+.adv-enter{
+	display: none;
+	transition: 0.5s;
+}
+
+.adv-fit{
+	display: none;
+}
+.adv-mscl{
+	display: none;
+}
+
+#home{
+	margin: 0;
+}
 //Upcoming Events
 #u-events{
 	margin: 0;
 }
-
 //About
 #about{
 	margin: 0;
 }
+
