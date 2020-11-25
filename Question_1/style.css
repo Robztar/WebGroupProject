@@ -8,9 +8,13 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar{
+  display: none;
 }
   .fixed{
-    background: url(images/7Mpw.gif);
+    background: url(images/giphy\ \(5\).gif);
     position: fixed;
   }
   .fixed-background{
@@ -21,11 +25,10 @@ html,body
 .fixed-background {
   position: relative;
   width: 100%;
+  height: 100%;
   z-index: 1000!important;
 }
-#second-BG{
-  background-image: url();
-}
+
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
   position: absolute;
@@ -42,13 +45,13 @@ html,body
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform;
 }
-.run{
+.running_div{
   background-image: linear-gradient(to right,rgb(38,38,38), rgb(214,57,51), rgb(228,156,17),rgb(214,57,51),rgb(38,38,38));
 }
 
@@ -72,22 +75,22 @@ html,body
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
-
+  
  }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-
+        
  }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-
+  
  }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-
+  
  }
 
 /* Extra large devices (large desktops, 1200px and up) */
