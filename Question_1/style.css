@@ -1,8 +1,8 @@
-body{
-  background-image: linear-gradient(#f7f7f7,#d1eaff,#c2e0ff,#343a40);
-
-}
-html,body
+/* moving gradient
+icons for 3 div
+border color for 3div
+*/
+html
 {
     width: 100%;  
     margin: 0px;
@@ -13,8 +13,14 @@ html,body
 html::-webkit-scrollbar{
   display: none;
 }
+
+#index1{
+  background-image: linear-gradient(white,#f7f7f7,#d1eaff);
+  min-height: 100vh;
+}
+
   .fixed{
-    background: url(images/giphy\ \(5\).gif);
+    background: url(images/vu.gif);
     position: fixed;
   }
   .fixed-background{
@@ -51,19 +57,25 @@ html::-webkit-scrollbar{
   transform: translateZ(0);
   will-change: transform;
 }
-.running_div{
-  background-image: linear-gradient(to right,rgb(38,38,38), rgb(214,57,51), rgb(228,156,17),rgb(214,57,51),rgb(38,38,38));
+#index2{
+  background-color: white;
+  min-height: 100vh;
+
 }
 
+/* background-image: linear-gradient(to right,rgb(38,38,38), rgb(214,57,51), rgb(228,156,17),rgb(214,57,51),rgb(38,38,38));
+   */
 
 .nav-item{
   padding: 8px 14px;
 }
-.action{
+#action1{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   border-radius: 50px;
   background-color: rgba(255, 103, 84, .2);
 }
-.action2{
+#action2{
   background-color: #ff6754;
   color: white;
   text-decoration: none;
@@ -71,21 +83,73 @@ html::-webkit-scrollbar{
   border-radius: 0%;
 }
 
+#action3{
+  background-color: #7292c7;
+  color: white;
+}
+#action4{
+  background-color: #ff6754;
+  color: white;
+}
+#action5{
+  background-color:#5bd6a4 ;
+  color: white;
+}
+
+
+
+#index3{
+  background-color: #15243b;
+  min-height: 100vh;
+}
+
+.memberMain{
+  background-color: rgb(54, 61, 61);
+  background-image: url(images/clay-banks-u27Rrbs9Dwc-unsplash.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#memberPage{
+  height: 100%;
+}
 /* blur background  */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+  #pic1{
+    display: none;
+  }
   
+  #action1{
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50px;
+    background-color: white;
+  }
  }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-        
+   
+  
+  #action1{
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50px;
+    background-color: white;
+  }
  }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
   
+  #action1{
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50px;
+    background-color: white;
+  }
  }
 
 /* // Large devices (desktops, 992px and up) */
