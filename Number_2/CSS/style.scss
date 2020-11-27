@@ -191,6 +191,7 @@ section {
 	.smllscn{
 		display: none;
 	}
+	/*
 	//Home
 	#home{
 		padding-left: 5rem;
@@ -202,7 +203,7 @@ section {
 	//About
 	#about{
 		padding-left: 5rem;
-	}
+	}*/
 
 	//Exercise - Large Screen Animation Control
 	#exercise{
@@ -637,6 +638,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem;
 }
 
 .noscroll{
@@ -648,9 +650,12 @@ ul{
 	list-style: none;
 }
 .exlink a{
+	width: 100%;
 	text-decoration: none;
+	text-align: center;
 	color: $txtcola;
-	padding: 1rem 0;
+	background: transparent;
+	padding: 1.5rem 3rem 1.5rem 3rem;
 	display: inline-block;
 	font-size: 1rem;
 	font-weight: lighter;
@@ -664,7 +669,11 @@ ul{
 
 .exlink a:hover{
 	color: $txtcola;
+	text-shadow: 0 0 10px $maincol2,0 0 20px $maincol1;
+	border-bottom: 4px solid $maincol2;
+	border-radius: 5rem;
 	text-decoration: none;
+	font-size: 1.5rem;
 }
 
 .excont.active .exlink a{
