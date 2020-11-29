@@ -105,14 +105,26 @@ html::-webkit-scrollbar{
 
 .memberMain{
   background-color: rgb(54, 61, 61);
-  background-image: url(images/clay-banks-u27Rrbs9Dwc-unsplash.jpg);
+  background-image: url(images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
+
 }
-#memberPage{
-  height: 100%;
+
+
+#member1{
+  background-color: rgba(54, 61, 61, 0.623);
+  
 }
+#about1{
+  min-height: 100vh;
+  background-color: #d8d8d8;
+}
+#about2{
+  min-height: 100vh;
+}
+
 /* blur background  */
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -127,6 +139,7 @@ html::-webkit-scrollbar{
     border-radius: 50px;
     background-color: white;
   }
+
  }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -139,6 +152,7 @@ html::-webkit-scrollbar{
     border-radius: 50px;
     background-color: white;
   }
+ 
  }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -150,6 +164,7 @@ html::-webkit-scrollbar{
     border-radius: 50px;
     background-color: white;
   }
+  
  }
 
 /* // Large devices (desktops, 992px and up) */
