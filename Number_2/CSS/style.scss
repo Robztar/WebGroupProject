@@ -191,19 +191,7 @@ section {
 	.smllscn{
 		display: none;
 	}
-	//Home
-	#home{
-		padding-left: 5rem;
-	}
-	//Upcoming Events
-	#u-events{
-		padding-left: 5rem;
-	}
-	//About
-	#about{
-		padding-left: 5rem;
-	}
-
+	
 	//Exercise - Large Screen Animation Control
 	#exercise{
 		opacity: 0;
@@ -284,7 +272,6 @@ section {
 		}
 	}
 	
-	
 	.excont.active .exlink{
 		width: 30%;
 		right: 0.6rem;
@@ -358,17 +345,15 @@ section {
 		margin-top: 12vh;
 		margin-left: 10%;
 	}
-	.exseg-serv{/*
-		position: relative;
-		margin: 1rem 0 1rem 0;
-		padding: 1rem;
-		background: rgba(209, 209, 209, 0.3);
-		border-radius: 25px;*/
+	.exseg-serv{
 		min-height: 68vh;
 	}
 	.exseg-serv{
 		margin: 1rem 0 1rem 0;
 		padding: 1rem;
+	}
+	.exseg-pop i{
+		padding-left: 95%;
 	}
 }
 
@@ -438,18 +423,16 @@ section {
 		height: auto;
 		margin-top: 1rem;
 	}
-	.exseg-serv{/*
-		position: relative;
-		margin: 1rem 0 1rem 0;
-		padding: 1rem;
-		background: rgba(209, 209, 209, 0.3);
-		border-radius: 25px;
-		min-height: 68vh;*/
+	.exseg-serv{
 		height: auto;
 	}
 	.exseg-serv{
 		margin: 0.3rem 0 0.3rem 0;
 		padding: 0.3rem;
+	}
+	.exseg-pop i{
+		//margin: 1rem;
+		padding-left: 90%;
 	}
 }
 
@@ -637,6 +620,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem;
 }
 
 .noscroll{
@@ -648,9 +632,12 @@ ul{
 	list-style: none;
 }
 .exlink a{
+	width: 100%;
 	text-decoration: none;
+	text-align: center;
 	color: $txtcola;
-	padding: 1rem 0;
+	background: transparent;
+	padding: 1.5rem 3rem 1.5rem 3rem;
 	display: inline-block;
 	font-size: 1rem;
 	font-weight: lighter;
@@ -664,7 +651,11 @@ ul{
 
 .exlink a:hover{
 	color: $txtcola;
+	text-shadow: 0 0 10px $maincol2,0 0 20px $maincol1;
+	border-bottom: 4px solid $maincol2;
+	border-radius: 5rem;
 	text-decoration: none;
+	font-size: 1.5rem;
 }
 
 .excont.active .exlink a{
@@ -798,8 +789,8 @@ ul{
 }
 .exseg-pop i{
 	border-radius: 50%;
-	margin: 1rem;
-	margin-left: 95%;
+	width: 100%;
+	margin: 1.5rem;
 	font-size: 2rem;
 	color: gray;
 	cursor: pointer;
@@ -816,15 +807,10 @@ ul{
 }
 
 //begin main
-//.newbbtn{}
 .newb-enter{
 	display: none;
 	transition: 0.5s;
 }
-
-/*.n-fit-link{}
-.n-mscl-link{}
-.newb-start{}*/
 
 .newb-fit{
 	display: none;
@@ -866,10 +852,6 @@ ul{
 }
 //Upcoming Events
 #u-events{
-	margin: 0;
-}
-//About
-#about{
 	margin: 0;
 }
 

@@ -181,15 +181,6 @@ section {
   .smllscn {
     display: none;
   }
-  #home {
-    padding-left: 5rem;
-  }
-  #u-events {
-    padding-left: 5rem;
-  }
-  #about {
-    padding-left: 5rem;
-  }
   #exercise {
     opacity: 0;
   }
@@ -428,17 +419,14 @@ section {
     margin-left: 10%;
   }
   .exseg-serv {
-    /*
-		position: relative;
-		margin: 1rem 0 1rem 0;
-		padding: 1rem;
-		background: rgba(209, 209, 209, 0.3);
-		border-radius: 25px;*/
     min-height: 68vh;
   }
   .exseg-serv {
     margin: 1rem 0 1rem 0;
     padding: 1rem;
+  }
+  .exseg-pop i {
+    padding-left: 95%;
   }
 }
 
@@ -507,18 +495,14 @@ section {
     margin-top: 1rem;
   }
   .exseg-serv {
-    /*
-		position: relative;
-		margin: 1rem 0 1rem 0;
-		padding: 1rem;
-		background: rgba(209, 209, 209, 0.3);
-		border-radius: 25px;
-		min-height: 68vh;*/
     height: auto;
   }
   .exseg-serv {
     margin: 0.3rem 0 0.3rem 0;
     padding: 0.3rem;
+  }
+  .exseg-pop i {
+    padding-left: 90%;
   }
 }
 
@@ -759,6 +743,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem;
 }
 
 .noscroll {
@@ -771,9 +756,12 @@ ul {
 }
 
 .exlink a {
+  width: 100%;
   text-decoration: none;
+  text-align: center;
   color: white;
-  padding: 1rem 0;
+  background: transparent;
+  padding: 1.5rem 3rem 1.5rem 3rem;
   display: inline-block;
   font-size: 1rem;
   font-weight: lighter;
@@ -790,7 +778,11 @@ ul {
 
 .exlink a:hover {
   color: white;
+  text-shadow: 0 0 10px magenta, 0 0 20px red;
+  border-bottom: 4px solid magenta;
+  border-radius: 5rem;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .excont.active .exlink a {
@@ -1000,8 +992,8 @@ ul {
 
 .exseg-pop i {
   border-radius: 50%;
-  margin: 1rem;
-  margin-left: 95%;
+  width: 100%;
+  margin: 1.5rem;
   font-size: 2rem;
   color: gray;
   cursor: pointer;
@@ -1027,9 +1019,6 @@ ul {
   transition: 0.5s;
 }
 
-/*.n-fit-link{}
-.n-mscl-link{}
-.newb-start{}*/
 .newb-fit {
   display: none;
 }
@@ -1071,10 +1060,6 @@ ul {
 }
 
 #u-events {
-  margin: 0;
-}
-
-#about {
   margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
