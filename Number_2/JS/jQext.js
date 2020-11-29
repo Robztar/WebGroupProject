@@ -1,5 +1,6 @@
 $(document).ready(() =>
 {
+  window.onresize = () => { window.location.reload()}
   //hamburger view toggle
   
   /*
@@ -175,16 +176,18 @@ $(document).ready(() =>
   //scroll functions
   const vheight = $(window).height();
 
-  const hTop = 0;
-  //const hMid = vheight/2;
+  //const hTop = 0;
   const hMid = (vheight/3)*2;
-  const exTop = vheight;
+  //const exTop = vheight;
   const exMid= vheight*1.5;
   const upTop= vheight*2;
-  const upMid= vheight*2.5;
+  //const upMid= vheight*2.5;
   const aTop= vheight*3;
 
-
+  //Large Screen scroll effecs
+  // make responsive to width>800 & height>600/650
+    
+  if($(window).width()>800){
   $('.home').toggleClass('fresh-link',$(this).scrollTop()<vheight);
   
   $('main').scroll(function(){
@@ -211,8 +214,6 @@ $(document).ready(() =>
 
 
     //exercise fade in/out
-    //responsive to width>800 & height>600/650
-    if($(window).width()>800){
       if(pos>hMid && pos<exMid){
         $("#exercise").css("opacity","1");
         $('.exnav').css({"display, block":"opacity,1"});
@@ -224,7 +225,7 @@ $(document).ready(() =>
         $('.exnav').css({"display, none":"opacity,0"});
         $('.exnav').css('position','relative');
       }
-    }
+    
     
     //Other sections if I feel like
     /*
@@ -254,7 +255,7 @@ $(document).ready(() =>
       $("#exercise").remove(".temp");
     }*/
   });
-
+}
   //beginner 
 
   //entry/exit
