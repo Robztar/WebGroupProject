@@ -10,11 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/about.css">
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/events.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    -->
 
     <title>On The Limb</title>
+    <!--If You see this, you are on the latest update-->
     
     <script src="https://kit.fontawesome.com/99738b2def.js" crossorigin="anonymous"></script>
 
@@ -63,21 +67,49 @@
 
       <!--Linked Sections-->
       <section id="home" class="">
-        
-        <h1>SPA Fitness Web Project</h1> 
-
-        
-        <div>
+        <div class="home-cont">
           <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../Images/couple-exercising.jpg" class="d-block" style="width:1400px;height:500px">
+              <div class="carousel-item active slide-a">
+                <article>
+                  <div>
+                    <h1>On The Limb Fitness Site</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nam dignissimos doloremque laudantium voluptatibus laborum quisquam amet molestias et eaque impedit, labore laboriosam neque ullam vero voluptatum sapiente voluptas est magnam. Consequatur cum, excepturi officia sint ipsam, ducimus possimus at eius asperiores facere libero delectus, dignissimos quia voluptatibus quo natus?
+                    </p>
+                  </div>
+                </article>
+                
               </div>
-              <div class="carousel-item">
-                <img src="../Images/blackpeople-exercising.jpeg" class="d-block" style="width:1400px;height:500px">
+              <div class="carousel-item slide-b">
+                <article>
+                  <div>
+                    <h1>Have a Look at The Exercises Offered</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nam dignissimos doloremque laudantium voluptatibus laborum quisquam amet molestias et eaque impedit, labore laboriosam neque ullam vero voluptatum sapiente voluptas est magnam. Consequatur cum, excepturi officia sint ipsam, ducimus possimus at eius asperiores facere libero delectus, dignissimos quia voluptatibus quo natus?
+                    </p>
+                  </div>
+                </article>
               </div>
-              <div class="carousel-item">
-                <img src="../Images/Black-woman-at-the-gym.jpg" class="d-block" style="width:1400px;height:500px">
+              <div class="carousel-item slide-c">
+                <article>
+                  <div>
+                    <h1>Check Out Upcoming Events</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nam dignissimos doloremque laudantium voluptatibus laborum quisquam amet molestias et eaque impedit, labore laboriosam neque ullam vero voluptatum sapiente voluptas est magnam. Consequatur cum, excepturi officia sint ipsam, ducimus possimus at eius asperiores facere libero delectus, dignissimos quia voluptatibus quo natus?
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="carousel-item slide-d">
+                <article>
+                  <div>
+                    <h1>Don't Hesitate to Donate</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, nam dignissimos doloremque laudantium voluptatibus laborum quisquam amet molestias et eaque impedit, labore laboriosam neque ullam vero voluptatum sapiente voluptas est magnam. Consequatur cum, excepturi officia sint ipsam, ducimus possimus at eius asperiores facere libero delectus, dignissimos quia voluptatibus quo natus?
+                    </p>
+                  </div>
+                </article>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -88,6 +120,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+          </div>
         </div>
       </section>
 
@@ -97,8 +130,8 @@
 
           <div class="exnav">
             <div class="exmenu">
-              <h3 class="exlogo">Exercise Plans</h3>
-              <div class="exham">
+              <h3 class="exlogo extgl">Exercise Plans</h3>
+              <div class="exham extgl">
                 <div class="tripbar">
 
                 </div>
@@ -148,40 +181,44 @@
                       <hr>
                     </div>
                     <div class="exseg-start">
-                      <div class="exseg-card n-fit-link">
-                        <!--<i class="fas fa-running"></i>-->
-                        <img src="../Images/icons8-treadmill-48.png" alt="">
-                        <h5>Fitness Training</h5>
-                        <p>
-                          Ready to shed some weight, improve your health, or improve your general mobility? How about a combination or all of the above?<br>Click to continue to your exercise plan.
-                        </p>
-                      </div>
-                      
-                      <div class="exseg-card n-mscl-link">
-                        <!-- <i class="fas fa-dumbbell"></i>-->
-                        <img src="../Images/icons8-bench-press-40.png" alt="">
-                        <h5>Strength Training</h5>
-                        <p>
-                          Ready to gain muscle mass? Are you interested in increasing muscular strength?<br>Click to continue to your exercise plan. 
-                        </p>
+                      <div class="card-deck">
+                        <div class="card exseg-card n-fit-link">
+                          <img src="../Images/icons8-treadmill-96.png" class="card-img-top " alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Fitness Training</h5>
+                            <p>
+                              Ready to shed some weight, improve your health, or improve your general mobility? How about a combination or all of the above?<br>Click to continue to your exercise plan.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card exseg-card n-mscl-link">
+                          <img src="../Images/icons8-bench-press-96.png" class="card-img-top" alt="Bench Press icon">
+                          <div class="card-body">
+                            <h5 class="card-title">Strength Training</h5>
+                            <p>
+                              Ready to gain muscle mass? Are you interested in increasing muscular strength?<br>Click to continue to your exercise plan. 
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    
                   </div>
+
                   <div class="newb-fit exseg-pop">
                     <i class="far fa-times-circle"></i>
 
                     <div class="pop-cont">
-                      <h4>Warm Up: 1 set</h4>
+                      <h2 style="margin-bottom: 3rem;">Beginner Fitness Training</h2>
+                      <h4>Warm Up: <span style="color: red;">&emsp; 1 Set</span></h4>
                       <table class="table table-hover table-borderless">
                         <thead class="thead-dark">
                           <tr>
                             <th scope="col">Exercise</th>
-                            <th scope="col">Repitition/Tine</th>
+                            <th scope="col">Repitition/Time</th>
                             <th scope="col">Alternate Exercise</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody >
                           <tr>
                             <th scope="row">Run on the spot</th>
                             <td>20 seconds</td>
@@ -202,17 +239,19 @@
                             <td>x10</td>
                             <td>Wall Squats</td>
                           </tr>
+                        </tbody>
+                        <tfoot>
                           <tr>
                             <th scope="row" colspan="3" class="text-center table-dark">Rest: 20 seconds</th>
                           </tr>
-                        </tbody>
+                        </tfoot>
                       </table>
-                      <h4>Exercises: 2 sets</h4>
+                      <h4>Exercises: <span style="color: red;">&emsp; 2 Sets</span></h4>
                       <table class="table table-hover table-borderless">
                         <thead class="thead-dark">
                           <tr>
                             <th scope="col">Exercise</th>
-                            <th scope="col">Repitition/Tine</th>
+                            <th scope="col">Repitition/Time</th>
                             <th scope="col">Alternate Exercise</th>
                           </tr>
                         </thead>
@@ -247,17 +286,19 @@
                             <td>x15</td>
                             <td>-</td>
                           </tr>
+                        </tbody>
+                        <tfoot>
                           <tr>
                             <th scope="row" colspan="3" class="text-center table-dark">Rest: 20 seconds</th>
                           </tr>
-                        </tbody>
+                        </tfoot>
                       </table>
-                      <h4>Cool-down: 1 set</h4>
+                      <h4>Cool-down: <span style="color: red;">&emsp; 1 Set</span></h4>
                       <table class="table table-hover table-borderless">
                         <thead class="thead-dark">
                           <tr>
                             <th scope="col">Exercise</th>
-                            <th scope="col">Repitition/Tine</th>
+                            <th scope="col">Repitition/Time</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -279,33 +320,239 @@
                           <tr>
                             <th scope="row">Thigh Stretch (L/R)</th>
                             <td>10 seconds (each)</td>
-
                           </tr>
                         </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Well Done</th>
+                          </tr>
+                        </tfoot>
                       </table>
                     </div>
                   </div>
+
                   <div class="newb-mscl exseg-pop">
                     <i class="far fa-times-circle"></i>
                     <div class="pop-cont">
-                      <div>
-                        <ul>
-                          <li>One</li>
-                          <li>Two</li>
-                          <li>Three</li>
-                          <li>Four</li>
-                          <li>Five</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <ul>
-                          <li>One</li>
-                          <li>Two</li>
-                          <li>Three</li>
-                          <li>Four</li>
-                          <li>Five</li>
-                        </ul>
-                      </div>
+                      <h2 style="margin: 1.5rem 0 2.5rem; text-align: center;">Beginner Strength Training</h2>
+                      <h4>Warm Up: <span style="color: red;">&emsp; 1 Set</span></h4>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition/Time</th>
+                          </tr>
+                        </thead>
+                        <tbody >
+                          <tr>
+                            <th scope="row">Run on the spot</th>
+                            <td>20 seconds</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Jumping Jacks</th>
+                            <td>x25</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Arm Circles (forward/backwards)</th>
+                            <td>x10/x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Squats</th>
+                            <td>x10</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Rest: 20 seconds</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+
+                      <h4>Exercises</h4>
+                      <p style="color: orangered; margin-bottom: 1.5rem;">*Choose one of the 4 muscle groups per day or based on your preference*</p>
+                      <h5>I. Chest & Triceps <span style="color: red;">&emsp; 3 Sets</span></h5>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Pushup Claps</th>
+                            <td>x20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Diamond Pushups</th>
+                            <td>x15</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Wide Pushups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Decline Pushups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Archer Pushups (L/R)</th>
+                            <td>x5 (each)</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Rest: 30 seconds</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <h5>II. Upper-Back & Biceps <span style="color: red;">&emsp; 3 Sets</span></h5>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Pullups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Chinups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Pseudo Pushups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Wide Pushups</th>
+                            <td>x10</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Typewriter Pushups (L/R)</th>
+                            <td>x5 (each)</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Rest: 30 seconds</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <h5>III. Lower-Back & Core <span style="color: red;">&emsp; 2 Sets</span></h5>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition/Time</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Plank</th>
+                            <td>30 seconds</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Mountain Climbers</th>
+                            <td>30 seconds</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Ab-Crunches</th>
+                            <td>x15</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Heel-Touch Crunches (L/R)</th>
+                            <td>x10 (each)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">L-Pullups</th>
+                            <td>x5</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">L-Hold</th>
+                            <td>10 seconds</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Rest: 20 seconds</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <h5>IV. Lower Body <span style="color: red;">&emsp; 3 Sets</span></h5>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition/Time</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Calf Raises</th>
+                            <td>x20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Wall-Sit</th>
+                            <td>45 seconds</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Jump Squats</th>
+                            <td>x20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Wide Squats</th>
+                            <td>x20</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Lunges (L/R)</th>
+                            <td>x15 (each)</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Rest: 30 seconds</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                      <h4>Cool-down: <span style="color: red;">&emsp; 1 Set</span></h4>
+                      <table class="table table-hover table-borderless">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Exercise</th>
+                            <th scope="col">Repitition/Time</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Shoulder Stretch (L/R)</th>
+                            <td>10 seconds (each)</td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">Tricep Stretch (L/R)</th>
+                            <td>10 seconds (each)</td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">Hip Circles (both directions)</th>
+                            <td>10 seonds (each)</td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">Thigh Stretch (L/R)</th>
+                            <td>10 seconds (each)</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th scope="row" colspan="2" class="text-center table-dark">Well Done</th>
+                          </tr>
+                        </tfoot>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -338,20 +585,25 @@
                       <hr>
                     </div>
                     <div class="exseg-start">
-                      <div class="exseg-card i-fit-link">
-                        <i class="fas fa-running"></i>
-                        <h5>Fitness Training</h5>
-                        <p>
-                          Have some fat to shed? Want to improve your athletic capabilities? Are you feeling health conscious? If these are your primary goals, click here to access your exercise plan.
-                        </p>
-                      </div>
-                      
-                      <div class="exseg-card i-mscl-link">
-                        <i class="fas fa-dumbbell"></i>
-                        <h5>Strength Training</h5>
-                        <p>
-                          You may want to build some substantial muscle mass. You may want to get stronger than you've ever been. If either of these echo your intentions, click here to access your exercise plan.
-                        </p>
+                      <div class="card-deck">
+                        <div class="card exseg-card i-fit-link">
+                          <img src="../Images/icons8-treadmill-96.png" class="card-img-top " alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Fitness Training</h5>
+                            <p>
+                              Have some fat to shed? Want to improve your athletic capabilities? Are you feeling health conscious? If these are your primary goals, click here to access your exercise plan.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card exseg-card i-mscl-link">
+                          <img src="../Images/icons8-bench-press-96.png" class="card-img-top" alt="Bench Press icon">
+                          <div class="card-body">
+                            <h5 class="card-title">Strength Training</h5>
+                            <p>
+                              Do you may want to build some substantial muscle mass? You may want to get stronger than you've ever been. If either of these echo your intentions, click here to access your exercise plan.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
@@ -432,20 +684,25 @@
                       <hr>
                     </div>
                     <div class="exseg-start">
-                      <div class="exseg-card a-fit-link">
-                        <i class="fas fa-running"></i>
-                        <h5>Fitness Training</h5>
-                        <p>
-                          Trying to get a shredded physique? Training to win an upcoming sports event? Whatever your fitness needs, have a look at a workout plan that may help you achieve such by cicking here.
-                        </p>
-                      </div>
-                      
-                      <div class="exseg-card a-mscl-link">
-                        <i class="fas fa-dumbbell"></i>
-                        <h5>Strength Training</h5>
-                        <p>
-                          In your bulking season and trying to build those muscles quickly? Or are you trying to be the new strength king or queen around? Just seeking a challenge? Your plan is just a click away. Click here to find it.
-                        </p>
+                      <div class="card-deck">
+                        <div class="card exseg-card a-fit-link">
+                          <img src="../Images/icons8-treadmill-96.png" class="card-img-top " alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Fitness Training</h5>
+                            <p>
+                              Trying to get a shredded physique? Training to win an upcoming sports event? Whatever your fitness needs, have a look at a workout plan that may help you achieve such by cicking here.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card exseg-card a-mscl-link">
+                          <img src="../Images/icons8-bench-press-96.png" class="card-img-top" alt="Bench Press icon">
+                          <div class="card-body">
+                            <h5 class="card-title">Strength Training</h5>
+                            <p>
+                              In your bulking season and trying to build those muscles quickly? Or are you trying to be the new strength king or queen around? Just seeking a challenge? Your plan is just a click away. Click here to find it.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     
@@ -521,6 +778,7 @@
         </div>
       </section>
 
+
       <section id="u-events" class="">
         <h1>Upcoming Events</h1> 
         <div>
@@ -533,20 +791,21 @@
           <div class="">
             <div class=" mx-auto mb-4">
               <h4 class="text-uppercase font-weight-bold">About Us</h4>
-              <hr class="hrbar hr-about">
+              <hr class="hr-about">
               <p>
-                This website was created for the upliftment and engagement of univeristy students. It was created by other individuals who saw the need for a free platform where students could access an excersing regime. 
-                Finance is always a concern for many students but it should not be adherence to not getting in shape or staying healthy. This forum provides just that. Free excerise from professionals to help stay fit throughtout their tenure.
+                This website was created for the upliftment and engagement of univeristy students. It was created by other individuals who saw the need for a free platform where students could access an exercising regime. 
+                Finance is always a concern for many students but it should not be adherence to not getting in shape or staying healthy. This forum provides just that. Free exercise from professionals to help stay fit throughtout their tenure.
               </p>
               <p>
                 The services offered by this wedsite are entirely free as we are a subsidary of a non-profit organization. 
                 Therefore, to continue doing what we do and bringing this great servicee to you on our platform, we ask for your 
-                monitary support to help keep our doors open. These donations will go torwards our employess and other contributors of this site. 
+                monitary support to help keep our doors open. These donations will go torwards our employees and other contributors of this site. 
                 Thank you for thinking of us and continue to enjoy our service.
               </p>
-              <p>
-                Disclaimer: Before starting each set of reps remember to warm up to avoid risk of injuries. Also if you have any underlying medical conditons consult your doctor before starting these sessions. This site is purely for the benefit of students or any other personels. These set are given by trained and professional trainers.
+              <p style="color: orangered;">
+                *Disclaimer: Before starting each set of reps remember to warm up to avoid risk of injuries. Also if you have any underlying medical conditons consult your doctor before starting these sessions. This site is purely for the benefit of students or any other personels. These set are given by trained and professional trainers.
               </p>
+
             </div>
           </div>
           

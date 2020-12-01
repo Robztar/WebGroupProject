@@ -32,10 +32,11 @@
      background: white;
      height: 1px;
      border-radius: 2px;
-     margin-bottom: 2rem;
+
 }
 .hr-about{
      background: linear-gradient(135deg, magenta, red);
+     border-radius: 2px;
      height: 2px;
 }
 

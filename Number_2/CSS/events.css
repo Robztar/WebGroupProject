@@ -7,7 +7,7 @@
      padding-left: 5rem;
 }
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
+/*body {font-family: Verdana, sans-serif;}*/
 
 /* Month header */
 .month {
@@ -77,5 +77,5 @@ body {font-family: Verdana, sans-serif;}
 .days li .active {
   padding: 5px;
   background: #1abc9c;
-  color: white !important
+  color: white !important;
 }
