@@ -1,0 +1,38 @@
+#home{
+     margin: 0;
+}
+
+.carousel-item{
+     height: 100vh;
+     width: 100%;
+}
+.carousel-item article{
+     position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(57, 70, 83, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-item article div{
+     max-width: 50%;
+	text-align: center;
+	color: white;
+}
+
+/*Instead of img tags, i set the div background to the picture*/
+.slide-a{
+     background: url("../Images/couple-exercising.jpg") no-repeat top center / cover;
+}
+.slide-b{
+     background: url("../Images/blackpeople-exercising.jpeg") no-repeat top center / cover;
+}
+/*Maybe change this picture since it is a bit low quality*/
+.slide-c{
+     background: url("../Images/Black-woman-at-the-gym.jpg") no-repeat top center / cover;
+}
+/*This is a filler photo for a potential fourth page*/
+.slide-d{
+     background: url("../Images/muscle_bld.jpg") no-repeat top center / cover;
+}
