@@ -459,7 +459,6 @@ section {
   }
   section {
     height: auto;
-    padding-top: 5rem;
   }
   ::-webkit-scrollbar {
     width: 0.5rem;
@@ -1075,9 +1074,5 @@ ul {
 
 .adv-mscl {
   display: none;
-}
-
-#home {
-  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
