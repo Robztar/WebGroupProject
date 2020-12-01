@@ -1,7 +1,9 @@
 #home{
      margin: 0;
 }
-
+h1{
+     font-size: 90px;
+}
 .carousel-item{
      height: 100vh;
      width: 100%;
