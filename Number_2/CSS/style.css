@@ -415,6 +415,7 @@ section {
   .exseg-in {
     width: 85%;
     height: 82vh;
+    border-radius: 25px;
     margin-top: 12vh;
     margin-left: 10%;
   }
@@ -426,7 +427,8 @@ section {
     padding: 1rem;
   }
   .exseg-pop i {
-    padding-left: 95%;
+    margin: 1.5rem;
+    margin-left: 95%;
   }
 }
 
@@ -456,6 +458,7 @@ section {
     margin: 0;
   }
   section {
+    height: auto;
     padding-top: 5rem;
   }
   ::-webkit-scrollbar {
@@ -491,18 +494,22 @@ section {
   }
   .exseg-in {
     width: 100%;
-    height: auto;
+    border-radius: 2px;
     margin-top: 1rem;
-  }
-  .exseg-serv {
-    height: auto;
+    height: 100%;
+    overflow-y: auto;
   }
   .exseg-serv {
     margin: 0.3rem 0 0.3rem 0;
     padding: 0.3rem;
+    margin-bottom: 10%;
+  }
+  .newb-enter {
+    height: 100%;
   }
   .exseg-pop i {
-    padding-left: 90%;
+    margin: 1.5rem;
+    margin-left: 93%;
   }
 }
 
@@ -554,6 +561,13 @@ section {
   font-size: 2rem;
   letter-spacing: 1px;
   line-height: 4rem;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.exlogo:hover {
+  text-shadow: 0 0 30px magenta;
 }
 
 .exham {
@@ -844,8 +858,8 @@ ul {
 
 .exseg-in {
   position: absolute;
+  text-align: center;
   background-color: white;
-  border-radius: 25px;
   padding: 1rem;
   color: black;
 }
@@ -875,7 +889,7 @@ ul {
   font-size: 1.1rem;
   font-style: bold;
   text-decoration: none;
-  border-radius: 3rem;
+  border-bottom: 1px solid magenta;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,8 +904,10 @@ ul {
 }
 
 .exseg-links:hover {
-  background: magenta;
-  color: white;
+  text-shadow: 0 0 25px magenta;
+  border-bottom: 3px solid magenta;
+  border-radius: 4rem;
+  color: black;
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -906,6 +922,7 @@ ul {
 
 .exseg-nav a i:hover {
   color: red;
+  text-shadow: 0 0 2.5px red;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -917,6 +934,7 @@ ul {
 }
 
 .exseg-start {
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -929,10 +947,6 @@ ul {
 }
 
 .exseg-card {
-  margin: 3rem;
-  padding: 0.5rem;
-  left: 3rem;
-  width: 100%;
   background: rgba(209, 209, 209, 0.3);
   border-radius: 15px;
   -webkit-transition: 0.5s;
@@ -944,9 +958,13 @@ ul {
   background: linear-gradient(135deg, red, magenta);
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
+  -webkit-box-shadow: -10px 20px 10px rgba(255, 0, 0, 0.33), -10px 20px 7px rgba(255, 0, 255, 0.35);
+          box-shadow: -10px 20px 10px rgba(255, 0, 0, 0.33), -10px 20px 7px rgba(255, 0, 255, 0.35);
 }
 
 .exseg-card img {
+  margin: 0.5rem auto 0 auto;
+  display: block;
   height: 7rem;
   width: 7rem;
 }
@@ -992,8 +1010,6 @@ ul {
 
 .exseg-pop i {
   border-radius: 50%;
-  width: 100%;
-  margin: 1.5rem;
   font-size: 2rem;
   color: gray;
   cursor: pointer;
@@ -1008,9 +1024,15 @@ ul {
 }
 
 .pop-cont {
-  margin: 5%;
+  margin: 0 5%;
   height: 70%;
   overflow: auto;
+  border-top: 4px solid #23232e;
+  border-bottom: 4px solid #23232e;
+}
+
+.pop-cont table {
+  margin-bottom: 3rem;
 }
 
 .newb-enter {
@@ -1056,10 +1078,6 @@ ul {
 }
 
 #home {
-  margin: 0;
-}
-
-#u-events {
   margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

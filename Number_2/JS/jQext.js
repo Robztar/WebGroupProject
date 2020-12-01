@@ -15,7 +15,7 @@ $(document).ready(() =>
     }
   }*/
   var x=1;
-  $('.exham').on('click',() =>
+  $('.extgl').on('click',() =>
   {
     
     if(x==1){

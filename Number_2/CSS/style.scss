@@ -176,7 +176,6 @@ section {
 
 	.nav-bar:hover .link-text {
 		display: inline;
-		
 	}
 
 	.nav-bar:hover .logo .nav-icon
@@ -342,6 +341,7 @@ section {
 	.exseg-in{
 		width: 85%;
 		height: 100vh - 18vh;
+		border-radius: 25px;
 		margin-top: 12vh;
 		margin-left: 10%;
 	}
@@ -353,7 +353,8 @@ section {
 		padding: 1rem;
 	}
 	.exseg-pop i{
-		padding-left: 95%;
+		margin: 1.5rem;
+		margin-left: 95%;
 	}
 }
 
@@ -380,6 +381,7 @@ section {
 		
 	}
 	section{
+		height: auto;
 		padding-top: 5rem;
 	}
 	::-webkit-scrollbar {
@@ -420,24 +422,27 @@ section {
 
 	.exseg-in{
 		width: 100%;
-		height: auto;
+		border-radius: 2px;
 		margin-top: 1rem;
-	}
-	.exseg-serv{
-		height: auto;
+		height: 100%;
+		overflow-y: auto;
 	}
 	.exseg-serv{
 		margin: 0.3rem 0 0.3rem 0;
 		padding: 0.3rem;
+		margin-bottom: 10%;
+	}
+	.newb-enter{
+		height: 100%;
 	}
 	.exseg-pop i{
-		//margin: 1rem;
-		padding-left: 90%;
+		margin: 1.5rem;
+		margin-left: 93%;
 	}
 }
 
 
-//Exercise - highly experimental ids and classes
+//Exercise
 #exercise{
 	margin: 0;
 	transition: 0.5s;
@@ -484,6 +489,11 @@ section {
 	font-size: 2rem;
 	letter-spacing: 1px;
 	line-height: 4rem;
+	cursor: pointer;
+	transition: 300ms;
+}
+.exlogo:hover{
+	text-shadow: 0 0 30px $maincol2;
 }
 .exham{
 	height: 4rem;
@@ -686,8 +696,9 @@ ul{
 //ex-esgment main
 .exseg-in{
 	position: absolute;
+	text-align: center;
 	background-color: white;
-	border-radius: 25px;
+	
 	padding: 1rem;
 	color: $txtcolb;
 }
@@ -711,15 +722,19 @@ ul{
 	font-size: 1.1rem;
 	font-style: bold;
 	text-decoration: none;
-	border-radius: 3rem;
+	border-bottom: 1px solid magenta;
+	//border-radius: 3rem;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	transition: 0.3s ease-in-out;
 }
 .exseg-links:hover{
-	background:$maincol2;
-	color: $txtcola;
+	//background:$maincol2;
+	text-shadow: 0 0 25px $maincol2;
+	border-bottom: 3px solid magenta;
+	border-radius: 4rem;
+	color: $txtcolb;
 	text-decoration: none;
 	transition: 0.3s;
 }
@@ -731,6 +746,7 @@ ul{
 }
 .exseg-nav a i:hover{
 	color: $maincol1;
+	text-shadow: 0 0 2.5px $maincol1;
 	transition: 0.3s;
 }
 .exseg-serv{
@@ -739,25 +755,32 @@ ul{
 	border-radius: 25px;
 }
 .exseg-start{
+	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
 }
 .exseg-card{
-	margin: 3rem;
-	padding: 0.5rem;
-	left: 3rem;
-	width: 100%;
+	//margin: 3rem;
+	//padding: 0.5rem;
+	//left: 3rem;
+	//width: 100%;
 	background: rgba(209, 209, 209, 0.3);
 	border-radius: 15px;
 	transition: 0.5s;
 	cursor: pointer;
+	//min-height: 150px;
 }
 .exseg-card:hover{
 	background: $maingrad;
 	transform: translateY(-20px);
+	box-shadow: -10px 20px 10px rgba(255, 0, 0, 0.33),-10px 20px 7px rgba(255, 0, 255, 0.35);
 }
 .exseg-card img{
+	margin: 0.5rem auto 0 auto;
+	//margin-left: auto;
+	//margin-right: auto;
+	display: block;
 	height: 7rem;
 	width: 7rem;
 	//align-items: center;
@@ -789,8 +812,6 @@ ul{
 }
 .exseg-pop i{
 	border-radius: 50%;
-	width: 100%;
-	margin: 1.5rem;
 	font-size: 2rem;
 	color: gray;
 	cursor: pointer;
@@ -801,9 +822,14 @@ ul{
 	transition: 0.3s ease;
 }
 .pop-cont{
-	margin: 5%;
+	margin: 0 5%;
 	height: 70%;
 	overflow: auto;
+	border-top: 4px solid $seccol1;
+	border-bottom: 4px solid $seccol1;
+}
+.pop-cont table{
+	margin-bottom: 3rem;
 }
 
 //begin main
@@ -850,8 +876,5 @@ ul{
 #home{
 	margin: 0;
 }
-//Upcoming Events
-#u-events{
-	margin: 0;
-}
+
 

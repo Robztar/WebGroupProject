@@ -1,0 +1,8 @@
+/*Upcoming Events*/
+#u-events{
+	margin: 0;
+}
+.event-cont{
+     max-height: 100vh !important;
+     padding-left: 5rem;
+}
