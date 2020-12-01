@@ -227,4 +227,21 @@ input {
 	width: 40px;
 }
 
+.fa-facebook {
 
+	color: #3B5998;
+	}
+	
+	.fa-twitter {
+	
+	color:  #55ACEE;
+	}
+	
+	.fa-youtube {
+	
+	color: red;
+	}
+	
+	.fa-instagram {
+	color: magenta;
+	}
