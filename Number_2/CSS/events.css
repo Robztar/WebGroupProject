@@ -1,6 +1,10 @@
 /*Upcoming Events*/
 #u-events{
-	margin: 0;
+  margin: 0;
+  width: 50%;
+  display:block;
+  float: left;
+  position: relative;
 }
 .event-cont{
      max-height: 100vh !important;
@@ -14,7 +18,7 @@ ul {list-style-type: none;}
 .month {
   padding: 70px 25px;
   width: 100%;
-  background: #1abc9c;
+  background: magenta;
   text-align: center;
 }
 
@@ -37,7 +41,7 @@ ul {list-style-type: none;}
   padding-top: 10px;
 }
 
-/* Next button 
+/* Next button*/
 .month .next {
   float: right;
   padding-top: 10px;
@@ -74,10 +78,16 @@ ul {list-style-type: none;}
   color: #777;
 }
 
-/* Highlight the "current" day*/
+/* Highlight the events*/
 .days li .active {
   padding: 5px;
-  background: #1abc9c;
+  background: magenta;
   color: white !important;
 } 
-  
+.table table-striped table-dark {
+  float:left;
+  width: 50%;
+  display:block;
+  margin: 0;
+  position: relative;
+}
