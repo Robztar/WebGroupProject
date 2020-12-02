@@ -1,6 +1,10 @@
 #home{
      margin: 0;
 }
+h1{
+     font-size: 90px;
+}
+
 .carousel-item h1{
      font-size: 4rem;
 }
