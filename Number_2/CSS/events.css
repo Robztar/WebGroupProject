@@ -1,14 +1,10 @@
 /*Upcoming Events*/
 #u-events{
   margin: 0;
-  width: 50%;
-  display:block;
-  float: left;
-  position: relative;
 }
 .event-cont{
-     max-height: 100vh !important;
-     padding-left: 5rem;
+    max-height: 100vh !important;
+    padding-left: 5rem;
 }
 ul {list-style-type: none;}
 /*body {font-family: Verdana, sans-serif;}*/
@@ -84,8 +80,14 @@ ul {list-style-type: none;}
   background: magenta;
   color: white !important;
 } 
-.table table-striped table-dark {
-  float:left;
+.keep-l{
+  width: 50%;
+  display:block;
+  float: left;
+  position: relative;
+}
+.keep-r{
+  float:right;
   width: 50%;
   display:block;
   margin: 0;
