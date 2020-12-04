@@ -1,19 +1,12 @@
 $(document).ready(() =>
 {
-  window.onresize = () => { window.location.reload()}
+  //maybe can be made to scroll to original section with some if statements
+  window.onresize = () => {
+    window.location.reload();
+    window.location.hash = '#home';
+  }
+
   //hamburger view toggle
-  
-  /*
-  function actval(y){
-    if(y==1){
-      $('.ex').css('top','0');
-      y=y-1;
-    }
-    else{
-      $('.ex').css('top','auto');
-      y=y+1;
-    }
-  }*/
   var x=1;
   $('.extgl').on('click',() =>
   {
@@ -26,12 +19,11 @@ $(document).ready(() =>
       $('.ex').css('top','auto');
       x=x+1;
     }
-    //actval(x);
 
     $('.excont').toggleClass('active');
     $('main').toggleClass('noscroll');
 
-    //diable scroll and fade away main navbar
+    //diables scroll and fade away main navbar
     if($('.excont').hasClass('active')){
       $('.nav-bar').css('display','none');
     }
@@ -184,7 +176,6 @@ $(document).ready(() =>
 
   //Large Screen scroll effecs
   // make responsive to width>800 & height>600/650
-    
   if($(window).width()>800){
   $('.home').toggleClass('fresh-link',$(this).scrollTop()<vheight);
   
@@ -253,10 +244,8 @@ $(document).ready(() =>
       $("#exercise").remove(".temp");
     }*/
   });
-}
-  //beginner 
-
-  //entry/exit
+  }
+  //beginner entry/exit
   $('.newbbtn').on('click',() =>{
     $('.exbegin').toggle(1000);
     $('.newb-enter').toggle(1000);
@@ -277,9 +266,7 @@ $(document).ready(() =>
     $('.newb-mscl').toggle();
   });
 
-  //intermediate 
-
-  //entry/exit
+  //intermediate entry/exit
   $('.intermbtn').on('click',() =>{
     $('.exinte').toggle(1000);
     $('.interm-enter').toggle(1000);
