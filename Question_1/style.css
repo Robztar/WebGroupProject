@@ -130,8 +130,8 @@ html::-webkit-scrollbar{
 
 /* gradient animator */
 /* https://www.gradient-animator.com/ */
-.css-selector {
-  background: linear-gradient(270deg, #114357, #F29492);
+.movingGradient {
+  background: linear-gradient(270deg, black,#FF4B2B, black);
   background-size: 600% 600%;
 
   -webkit-animation: AnimationName 13s ease infinite;
