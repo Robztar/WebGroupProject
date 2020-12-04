@@ -34,11 +34,9 @@ $(document).ready(() =>
     //diable scroll and fade away main navbar
     if($('.excont').hasClass('active')){
       $('.nav-bar').css('display','none');
-      //$('main').css('padding-left','0');
     }
     else{
       $('.nav-bar').css('display','block');
-      //$('main').css('padding-left','5rem');
     }
 
     if(swb=='relative'|| $('.excont').hasClass('active')){

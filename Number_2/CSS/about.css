@@ -21,7 +21,7 @@
 }
 
 #about .container-fluid div{
-     margin-bottom: 2rem;
+     /* margin-bottom: 2rem; */
      /*margin-bottom: 3rem;*/
 }
 #about i{
@@ -46,21 +46,18 @@
 }
 
 .fa-facebook {
-
-color: #3B5998;
+     color: #3B5998;
 }
 
 .fa-twitter {
-
-color:  #55ACEE;
+     color:  #55ACEE;
 }
 
 .fa-youtube {
-
-color: red;
+     color: red;
 }
 
 .fa-instagram {
-color: magenta;
+     color: magenta;
 }
 
