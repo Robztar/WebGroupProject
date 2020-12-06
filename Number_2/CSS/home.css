@@ -3,7 +3,10 @@
 }
 
 .carousel-item h1{
-     font-size: 4rem;
+     font-size: 3.5rem;
+}
+.carousel-item{
+     font-size: 1.1rem;
 }
 .carousel-item{
      height: 100vh;
@@ -24,19 +27,34 @@
 	color: white;
 }
 
-/*Instead of img tags, i set the div background to the picture*/
+
 .slide-a{
      background: url("../Images/couple-exercising.jpg") no-repeat top center / cover;
 }
 .slide-b{
      background: url("../Images/blackpeople-exercising.jpeg") no-repeat top center / cover;
 }
-/*Maybe change this picture since it is a bit low quality*/
 .slide-c{
-     background: url("../Images/man-running.jpg") no-repeat top center / cover;
-}
-/*This is a filler photo for a potential fourth page
-Maybe could be a money-related photo*/
-.slide-d{
      background: url("../Images/Athlet.jpg") no-repeat top center / cover;
+}
+.slide-d{
+     background: url("../Images/donate-please.jpg") no-repeat top center / cover;
+}
+
+.home-btn{
+	margin-top: 1rem;
+	padding: 0.6rem 1.8rem;
+	background-color: magenta;
+	border: none;
+	border-radius: 25px;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.7s;
+}
+.home-btn:hover{
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	transition: 0.3s;
 }

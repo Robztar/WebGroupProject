@@ -1,6 +1,5 @@
 $(document).ready(() =>
 {
-  //maybe can be made to scroll to original section with some if statements
   window.onresize = () => {
     window.location.reload();
     window.location.hash = '#home';
