@@ -81,7 +81,7 @@ html::-webkit-scrollbar{
 
 
 .carousel-inner{
-  max-height: 38rem !important;
+  max-height: 45rem !important;
 }
 
 /*---Change Carousel Transition Speed --*/
