@@ -80,6 +80,20 @@ html::-webkit-scrollbar{
 }
 
 
+.carousel-inner{
+  max-height: 38rem !important;
+}
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active{
+  transition: transform 1.2s ease;
+}
+
+/*-- Carousel Content --*/
+
+
 /* gradient animator */
 /* https://www.gradient-animator.com/ */
 .movingGradient {
