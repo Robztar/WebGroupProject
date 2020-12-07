@@ -1,5 +1,6 @@
 #about{
      margin: 0;
+     background: rgba(255, 255, 255, 0.1);
      color: white;
      font-weight: 350;
 }
@@ -20,10 +21,6 @@
      }
 }
 
-#about .container-fluid div{
-     /* margin-bottom: 2rem; */
-     /*margin-bottom: 3rem;*/
-}
 #about i{
      font-size: 1.2rem;
 }

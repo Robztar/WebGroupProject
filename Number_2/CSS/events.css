@@ -26,7 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(255, 0, 255, 0), rgb(255, 0, 255),rgba(255, 0, 255, 0));
   text-align: center;
 }
 
@@ -96,7 +95,6 @@
   color: #777;
 }
 
-
 /* Highlight the events*/
 .days li .active{
   padding: 6px;
@@ -108,7 +106,7 @@
 
 /*Event hover Effects*/
 .days li:hover .active{
-  background: red; /*just box-shadow*/
+  background: red;
   border-radius: 50%;
   box-shadow: 0 0 0 4px #eee, 0 0 0 6px red;
 }
@@ -116,33 +114,21 @@
 .days .cal-hov div{
   position: absolute;
   bottom: 36px;
-  width: 300px;
+  /* width: 300px; */
   background: rgb(255, 68, 68);
   color: white;
   padding: 10px;
   border-radius: 1rem;
   visibility: hidden;
-  transition: 0.5s;
+  transition: 1s;
   opacity: 0;
-  transform: translateX(-25%) translateY(-50px);
 }
 .days .cal-hov:hover div{
   visibility: visible;
   opacity: 1;
-  transform: translateX(-25%) translateY(0px);
-}
-.days .cal-hov div::before{
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: rgb(255, 68, 68);
-  bottom: -5px;
-  left: 153px;
-  transform: rotate(45deg);
+  transition: 0.5s;
 }
 
-/*Resposiveness*/
 /* Large Screen */
 @media only screen and (min-width: 801px){
   .event-top{
@@ -160,6 +146,23 @@
   .days li:first-child {
     padding-left: 5rem; 
   }
+  .days .cal-hov div{
+    width: 300px;
+    transform: translateX(-25%) translateY(-50px);
+  }
+  .days .cal-hov:hover div{
+    transform: translateX(-25%) translateY(0px);
+  }
+  .days .cal-hov div::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 68, 68);
+    bottom: -5px;
+    left: 153px;
+    transform: rotate(45deg);
+  }
 }
 
 /* Small Screen */
@@ -168,10 +171,15 @@
     height: 50vh;
   }
   .month{
-    /* position: absolute; */
     width: 100%;
     height: 10%;
     background: linear-gradient(to top, rgba(255, 0, 255, 0.3), rgb(255, 0, 255));
-    /* background: rgba(255, 0, 255, 0.438); */
+  }
+  .days .cal-hov div{
+    width: 200px;
+    transform: translateX(-33%) translateY(-50px);
+  }
+  .days .cal-hov:hover div{
+    transform: translateX(-33%) translateY(0px);
   }
 } 
