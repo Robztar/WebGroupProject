@@ -81,6 +81,8 @@ html::-webkit-scrollbar{
   text-decoration: none;
   border: none;
   border-radius: 0%;
+  width: 150px;
+  height: 50px;
 }
 
 #action3{
