@@ -1,15 +1,11 @@
-/* moving gradient
-icons for 3 div
-border color for 3div
-*/
-html
-{
-    width: 100%;  
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-    scrollbar-width: none;
+html{
+  width: 100%;  
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  scrollbar-width: none;
 }
+
 html::-webkit-scrollbar{
   display: none;
 }
@@ -19,13 +15,11 @@ html::-webkit-scrollbar{
   min-height: 100vh;
 }
 
-
 #index2{
   background-color: white;
   min-height: 100vh;
 
 }
-
 
 .nav-item{
   padding: 8px 14px;
@@ -91,11 +85,7 @@ html::-webkit-scrollbar{
   transition: transform 1.2s ease;
 }
 
-/*-- Carousel Content --*/
-
-
-/* gradient animator */
-/* https://www.gradient-animator.com/ */
+/* Gradient*/
 .movingGradient {
   background: linear-gradient(270deg, black,#FF4B2B, black);
   background-size: 600% 600%;
@@ -121,31 +111,26 @@ html::-webkit-scrollbar{
   100%{background-position:0% 50%}
 }
 
-/* blur background  */
-
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
   #pic1{
     display: none;
   }
-  
 
  }
 
-/* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
+  /* // Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) { 
    
-  
-}  
+  }  
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-  
+  /* // Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) { 
   
  }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
+  /* // Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
   
   #action1{
     padding-left: 1.5rem;
@@ -155,8 +140,8 @@ html::-webkit-scrollbar{
     }
  }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
 
   
   #action1{
