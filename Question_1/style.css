@@ -19,62 +19,21 @@ html::-webkit-scrollbar{
   min-height: 100vh;
 }
 
-  .fixed{
-    background: url(images/cool-background\ \(2\).png);
-    position: fixed;
-  }
-  .fixed-background{
-    padding: 10rem 0;
-  }
 
-  /*-- Fixed Background Image --*/
-.fixed-background {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1000!important;
-}
-
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999 !important;
-}
-.fixed {
-  z-index: -999!important;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
-}
 #index2{
   background-color: white;
   min-height: 100vh;
 
 }
 
-/* background-image: linear-gradient(to right,rgb(38,38,38), rgb(214,57,51), rgb(228,156,17),rgb(214,57,51),rgb(38,38,38));
-   */
 
 .nav-item{
   padding: 8px 14px;
 }
 #action1{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  border-radius: 50px;
-  background-color: rgba(255, 103, 84, .2);
+  color: #ff6754;
 }
+
 #action2{
   background-color: #ff6754;
   color: white;
@@ -98,27 +57,11 @@ html::-webkit-scrollbar{
   color: white;
 }
 
-
-
 #index3{
   background-color: #15243b;
   min-height: 100vh;
 }
 
-.memberMain{
-  background-color: rgb(54, 61, 61);
-  background-image: url(images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-
-#member1{
-  background-color: rgba(54, 61, 61, 0.623);
-  
-}
 #about1{
   min-height: 100vh;
   background-color: #d8d8d8;
@@ -127,7 +70,14 @@ html::-webkit-scrollbar{
   min-height: 100vh;
 }
 
+.movingGradientMembers{
+  background: linear-gradient(270deg, #212224,#004E74,#017298, #004E74, #212224);
+  background-size: 600% 600%;
 
+  -webkit-animation: AnimationName 13s ease infinite;
+  -moz-animation: AnimationName 13s ease infinite;
+  animation: AnimationName 13s ease infinite;
+}
 
 
 /* gradient animator */
@@ -165,12 +115,6 @@ html::-webkit-scrollbar{
     display: none;
   }
   
-  #action1{
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 50px;
-    background-color: white;
-  }
 
  }
 
@@ -178,33 +122,33 @@ html::-webkit-scrollbar{
 @media (min-width: 576px) and (max-width: 767.98px) { 
    
   
-  #action1{
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 50px;
-    background-color: white;
-  }
- 
- }
+}  
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
   
-  #action1{
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 50px;
-    background-color: white;
-  }
   
  }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   
+  #action1{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 50px;
+    background-color: rgba(255, 103, 84, .2);
+    }
  }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
+  
+  #action1{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 50px;
+  background-color: rgba(255, 103, 84, .2);
+  }
 }
