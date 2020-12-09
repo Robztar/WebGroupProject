@@ -656,7 +656,8 @@ ul{
 }
 .overv a:hover{
 	text-shadow: 0 0 10px $maincol1,0 0 20px $maincol2;
-	border-bottom: 4px solid $maincol1;
+	border-bottom: none;
+	border-top: 4px solid $maincol1;
 }
 
 .excont.active .exlink a{
@@ -863,7 +864,3 @@ ul{
 .adv-mscl{
 	display: none;
 }
-
-
-
-

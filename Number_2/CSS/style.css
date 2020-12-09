@@ -793,7 +793,8 @@ ul {
 
 .overv a:hover {
   text-shadow: 0 0 10px red, 0 0 20px magenta;
-  border-bottom: 4px solid red;
+  border-bottom: none;
+  border-top: 4px solid red;
 }
 
 .excont.active .exlink a {
