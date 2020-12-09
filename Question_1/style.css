@@ -103,6 +103,43 @@ html::-webkit-scrollbar{
   display: block;
 }
 
+#signPage{
+  background-image: url("images/julian-hochgesang-98fy0iQ1HqQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#container {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+form, input, label, p ,#sl {
+  color: white !important;
+}
+
+#sl, form, input, :disabled, ::placeholder, p {
+  color: white !important;
+}
+#container:before{
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.397);
+  filter: blur(8px);
+  margin: -20px;
+}
+
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
