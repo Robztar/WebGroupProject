@@ -12,7 +12,7 @@ html::-webkit-scrollbar{
 
 #index1{
   background-image: linear-gradient(white,#f7f7f7,#d1eaff);
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #index2{
@@ -20,7 +20,6 @@ html::-webkit-scrollbar{
   min-height: 100vh;
 
 }
-
 .nav-item{
   padding: 8px 14px;
 }
