@@ -95,6 +95,14 @@ html::-webkit-scrollbar{
   animation: AnimationName 13s ease infinite;
 }
 
+#signUpPage{
+  display: none;
+}
+
+#signInPage{
+  display: block;
+}
+
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
