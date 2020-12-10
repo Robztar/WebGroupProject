@@ -16,8 +16,9 @@ The group members that contributed to this project are:
 According to the instructions given, there are two (2) main folders, each with a separate web project.
 
 ### 1. Club Website
-![](CHIPS_Sample Club Website.mp4)
-[![OTL Image](CHIPS_Sample Club Website.mp4)]
+
+##### See demo below:
+[![CHIPS Image](CHIPS_embed-image.jpeg)](https://www.youtube.com/embed/jR7q6tTP8PA)
 
 The is website serves the purpose of presenting the official C.H.I.P.S. club website. This website gives users the ability to be informed of current happenings of the club, the reason why the club exists, the executive team and an oppurtunity to log-in to their account or to join the C.H.I.P.S. family.
 
@@ -38,6 +39,7 @@ This page serves the purpose of allowing the user to either Log-in to their exis
 
 ### 2. On The Limb - Fitness Site
 
+##### See demo below:
 [![OTL Image](OTL_embed-pic.jpeg)](https://www.youtube.com/embed/jqvCiUc2oMs)
 
 The purpose of the site is to present exercises for persons of varying levels of fitness, all without a cost. It was created as a single page application (SPA), meaning all actions and links taken on the page will take place on the same page. Below are the sections one can expect to find on the website
