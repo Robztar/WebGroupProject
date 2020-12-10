@@ -342,6 +342,9 @@ section {
 		margin-top: 12vh;
 		margin-left: 10%;
 	}
+	.exseg-links{
+		padding: 0 10px 0 10px;
+	}
 	.exseg-serv{
 		min-height: 68vh;
 	}
@@ -422,6 +425,9 @@ section {
 		margin-top: 1rem;
 		height: 100%;
 		overflow-y: auto;
+	}
+	.exseg-links{
+		padding: 0;
 	}
 	.exseg-serv{
 		margin: 0.3rem 0 0.3rem 0;
@@ -708,7 +714,7 @@ ul{
 
 .exseg-links{
 	height: 2rem;
-	padding: 0 10px 0 10px;
+	// padding: 0 10px 0 10px;
 	background: transparent;
 	color: $txtcolb;
 	font-size: 1.1rem;
