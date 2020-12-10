@@ -14,7 +14,17 @@ The group members that contributed to this project are:
 According to the instructions given, there are two (2) main folders, each with a separate web project.
 
 ### 1. Club Website
+The 
 
+* ### Index
+
+* ### About Us
+
+* ### Meet Our Members
+
+* ### Contact Us
+
+* ### Sign up/ Login
 
 ### 2. On The Limb - Fitness Site
 <iframe width="1519" height="554" src="https://www.youtube.com/embed/jqvCiUc2oMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -31,6 +41,7 @@ This section contains all the exercises that persons may wish to engage in. It f
 When they click this button, they will be given two options for the purpose of their exercise. Whenever an option is selected, their exercise plan will be shown.
 
 * #### Upcoming Events
-
+The section entails the upcoming events planned for the month of December. We made the dates visible and gave details on the purpose and the venue. It was made also engaging as they just had to hover over the date to see a pop up of the scheduled event and all things pertaining to that particular upcoming event. For ever month that the website would have new activites the site would be updated to that particular month. 
 
 * #### About Us
+This was just to give information on the site, to let the visitors who use our platform to know what we are about. It gives information on our organization, where to find us on social media, ways to donate and most critical, the disclaimer tp prevent injury to any user and stay clear of lawsuits. If transactions were to be made ot the site, their card information would not be stored nor remembered by the site. Their financial idenity would be safe. 
