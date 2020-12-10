@@ -28,7 +28,7 @@ The
 
 ### 2. On The Limb - Fitness Site
 
-[![OTL Image](https://img.www.youtube.com/embed/jqvCiUc2oMs/0.jpg)](https://www.youtube.com/embed/jqvCiUc2oMs)
+[![OTL Image](OTL_embed-pic.jpeg)](https://www.youtube.com/embed/jqvCiUc2oMs)
 
 The purpose of the site is to present exercises for persons of varying levels of fitness, all without a cost. It was created as a single page application (SPA), meaning all actions and links taken on the page will take place on the same page. Below are the sections one can expect to find on the website
   
