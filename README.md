@@ -12,9 +12,11 @@ The group members that contributed to this project are:
 
 ## Websites
 
-<video width="320" height="240" controls>
+<!-- <video width="320" height="240" controls>
   <source src="CHIPS_Sample Club Website.mp4" type="video/mp4">
-</video>
+</video> -->
+
+[![OTL Image](OTL_embed-pic.jpeg)](CHIPS_Sample Club Website.mp4)
 
 According to the instructions given, there are two (2) main folders, each with a separate web project.
 
