@@ -16,8 +16,7 @@ The group members that contributed to this project are:
 According to the instructions given, there are two (2) main folders, each with a separate web project.
 
 ### 1. Club Website
-![](CHIPS_Sample Club Website.mp4)
-[![OTL Image](CHIPS_Sample Club Website.mp4)]
+[![CHIPS Image](CHIPS_embed-image.jpeg)](https://www.youtube.com/embed/jR7q6tTP8PA)
 
 The 
 
