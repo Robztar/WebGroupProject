@@ -16,6 +16,8 @@ The group members that contributed to this project are:
 According to the instructions given, there are two (2) main folders, each with a separate web project.
 
 ### 1. Club Website
+
+##### See demo below:
 [![CHIPS Image](CHIPS_embed-image.jpeg)](https://www.youtube.com/embed/jR7q6tTP8PA)
 
 The 
@@ -32,6 +34,7 @@ The
 
 ### 2. On The Limb - Fitness Site
 
+##### See demo below:
 [![OTL Image](OTL_embed-pic.jpeg)](https://www.youtube.com/embed/jqvCiUc2oMs)
 
 The purpose of the site is to present exercises for persons of varying levels of fitness, all without a cost. It was created as a single page application (SPA), meaning all actions and links taken on the page will take place on the same page. Below are the sections one can expect to find on the website
