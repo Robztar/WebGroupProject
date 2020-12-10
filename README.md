@@ -20,7 +20,7 @@ According to the instructions given, there are two (2) main folders, each with a
 ##### See demo below:
 [![CHIPS Image](CHIPS_embed-image.jpeg)](https://www.youtube.com/embed/jR7q6tTP8PA)
 
-The is website serves the purpose of presenting the official C.H.I.P.S. club website. This website gives users the ability to be informed of current happenings of the club, the reason why the club exists, the executive team and an oppurtunity to log-in to their account or to join the C.H.I.P.S. family.
+This website serves the purpose of presenting the official C.H.I.P.S. club website. This website gives users the ability to be informed of current happenings of the club, the reason why the club exists, the executive team and an oppurtunity to log-in to their account or to join the C.H.I.P.S. family.
 
 * ### Index
 The purpose of this page is welcome the users to the official C.H.I.P.S. website. The page gives the user an invitation to join the page, the mission of the club, the top stories, and our contact information in the footer.
@@ -29,7 +29,7 @@ The purpose of this page is welcome the users to the official C.H.I.P.S. website
 The purpose of this page is to explain to the user the reason why the club exists. The page gives a brief description of the club, a "What we do" section exhibiting what the club has done/is doing for its members and a slideshow of pictures of C.H.I.P.S. related events in the past.
 
 * ### Meet Our Members
-The purpose of this page is the let the user be aware of the regime for the that academic year.
+The purpose of this page is the let the user be aware of the regime for the current academic year.
 
 * ### Contact Us
 This page serves the purpose of giving the user an oppurtunity to reach out the the executive team. The user is able to give there name, email, the purpose of the enquiry, their message, and an oppurtunity to join the clubs newsletter.
