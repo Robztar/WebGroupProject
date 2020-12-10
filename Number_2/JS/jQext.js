@@ -174,7 +174,6 @@ $(document).ready(() =>
   const aTop= vheight*3;
 
   //Large Screen scroll effecs
-  // make responsive to width>800 & height>600/650
   if($(window).width()>800){
   $('.home').toggleClass('fresh-link',$(this).scrollTop()<vheight);
   
@@ -213,37 +212,9 @@ $(document).ready(() =>
         $('.exnav').css({"display, none":"opacity,0"});
         $('.exnav').css('position','relative');
       }
-    
-    
-    //Other sections if I feel like
-    /*
-    else{
-      $("#home").remove(".temp");
-    }
-  
-    //exercise section
-    if(pos>hMid && pos<=exMid){
-      $("#exercise").add(".temp");
-    }
-    else{
-      $("#exercise").remove(".temp");
-    }
-  
-    if(pos>exMid && pos<=upMid){
-      $("#u-events").add(".temp");
-    }
-    else{
-      $("#u-events").remove(".temp");
-    }
-  
-    if(pos>upMid){
-      $("#exercise").add(".temp");
-    }
-    else{
-      $("#exercise").remove(".temp");
-    }*/
   });
   }
+  
   //beginner entry/exit
   $('.newbbtn').on('click',() =>{
     $('.exbegin').toggle(1000);

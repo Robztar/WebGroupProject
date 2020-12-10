@@ -2,7 +2,6 @@
 $maincol1: red;
 $maincol2: magenta; //or color: #df49a6;
 $maingrad: linear-gradient(135deg, $maincol1, $maincol2);//or no gradient theme
-//$transparent: transparent;
 $seccol1: #23232e;
 $seccol1h: #141418;
 $txtcola: white;
@@ -393,7 +392,6 @@ section {
 	
 
 	//Exercise - Small Screen Animation Control
-	
 	.excont.active .exmain{
 		opacity: 0;
 	}
@@ -463,9 +461,7 @@ section {
 }
 
 .exnav{
-	//let position remain relative for small screen (or until further notice)
 	position: relative;
-	//position: fixed;
      top: 0;
      left: 0;
 	width: 100%;
@@ -519,8 +515,6 @@ section {
 	transform: translateY(10px);
 }
 .exmain{
-	//top-auto
-	//display: block;
 	position: relative;
 	width: 100%;
 	left: 0;
@@ -714,21 +708,18 @@ ul{
 
 .exseg-links{
 	height: 2rem;
-	// padding: 0 10px 0 10px;
 	background: transparent;
 	color: $txtcolb;
 	font-size: 1.1rem;
 	font-style: bold;
 	text-decoration: none;
 	border-bottom: 1px solid magenta;
-	//border-radius: 3rem;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	transition: 0.3s ease-in-out;
 }
 .exseg-links:hover{
-	//background:$maincol2;
 	text-shadow: 0 0 25px $maincol2;
 	border-bottom: 3px solid magenta;
 	border-radius: 4rem;
@@ -759,15 +750,10 @@ ul{
 	align-items: flex-start;
 }
 .exseg-card{
-	//margin: 3rem;
-	//padding: 0.5rem;
-	//left: 3rem;
-	//width: 100%;
 	background: rgba(209, 209, 209, 0.3);
 	border-radius: 15px;
 	transition: 0.5s;
 	cursor: pointer;
-	//min-height: 150px;
 }
 .exseg-card:hover{
 	background: $maingrad;
@@ -776,12 +762,9 @@ ul{
 }
 .exseg-card img{
 	margin: 0.5rem auto 0 auto;
-	//margin-left: auto;
-	//margin-right: auto;
 	display: block;
 	height: 7rem;
 	width: 7rem;
-	//align-items: center;
 }
 
 .exseg-pop{

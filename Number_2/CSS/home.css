@@ -13,7 +13,7 @@
      width: 100%;
 }
 .carousel-item article{
-    position: absolute;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(57, 70, 83, 0.5);
@@ -22,7 +22,7 @@
 	align-items: center;
 }
 .carousel-item article div{
-    max-width: 50%;
+	max-width: 50%;
 	text-align: center;
 	color: white;
 }
